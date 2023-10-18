@@ -1,0 +1,25 @@
+#container{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    
+    display: flex;
+}
+
+.button{
+    background-color: white;
+    color: black;
+
+    width: 20rem;
+    height: 3rem;
+    margin: 1rem;
+
+    border-radius: 8px;
+
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}

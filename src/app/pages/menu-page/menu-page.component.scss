@@ -1,0 +1,89 @@
+#container{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    
+    display: flex;
+    flex-direction: row-reverse;
+    overflow: hidden;
+}
+
+@keyframes rotate {
+    from{
+        transform: rotate(60deg);
+        
+    }
+
+    to{
+        transform: rotate(0);
+    }
+}
+
+#button_holder{
+    width: 30rem;
+    height: 30rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    transform-origin: bottom center;
+
+    animation-name: rotate;
+    animation-duration: 0.8s;
+    animation-timing-function: cubic-bezier(0, 1.06, 1, 1);
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both;
+}
+
+@keyframes slideIn {
+    from{
+        transform: rotateY(90deg);
+        
+    }
+
+    to{
+        transform: rotateY(0deg);
+    }
+}
+
+.button{
+    background-color: #191C25;
+    color: white;
+
+    width: 20rem;
+    height: 3rem;
+    margin: 0.4rem;
+
+    border-radius: 8px;
+
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transform-origin: center right;
+
+    animation-name: slideIn;
+    animation-duration: 0.5s;
+    animation-timing-function: cubic-bezier(0, 1.06, 1, 1);
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: backwards;
+}
+
+#login-button{
+    animation-delay: 0.1s;
+}
+
+#sign-up-button{
+    animation-delay: 0.3s;
+}
+
+#view-button{
+    animation-delay: 0.5s;
+}
