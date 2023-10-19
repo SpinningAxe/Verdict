@@ -1,61 +1,115 @@
 #container{
     width: 100vw;
     height: 100vh;
-    background-color: black;
+    background-color: #08080F;
     
     display: flex;
     flex-direction: row-reverse;
     overflow: hidden;
+    align-items: center;
 }
 
 @keyframes rotate {
     from{
-        transform: rotate(60deg);
-        
+        transform: rotateZ(-25deg);
     }
 
     to{
-        transform: rotate(0);
+        transform: rotateZ(-1deg);
     }
+}
+
+@keyframes rotateCircle {
+    from{
+        transform: rotate(360deg) scaleX(0.1) scaleY(0.1);
+    }
+
+    to{
+        transform: rotate(0deg) scaleX(1) scaleY(1);
+    }
+}
+
+@keyframes growLine {
+    from{
+        transform: scaleX(0) scaleY(0);
+    }
+
+    to{
+        transform: scaleX(1) scaleY(1);
+    }
+}
+
+@keyframes slideIn {
+    from{
+        transform: rotateY(90deg) translateX(10rem) translateY(-1rem);
+    }
+
+    to{
+        transform: rotateY(2deg) translateX(0rem) translateY(0rem);
+    }
+}
+
+#lines{
+    position: relative;
+    z-index: -1;
+
+    top: -80px;
+
+    animation-name: growLine;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0, 0, 0, 0.98);
+}
+
+#circle{
+    position: absolute;
+    z-index: -2;
+
+    animation-name: rotateCircle;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0, 0, 0, 0.98);
 }
 
 #button_holder{
     width: 30rem;
-    height: 30rem;
+    height: max-content;
 
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     
-    transform-origin: bottom center;
+    transform-origin: center center;
 
     animation-name: rotate;
-    animation-duration: 0.8s;
-    animation-timing-function: cubic-bezier(0, 1.06, 1, 1);
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0, 0, 0, 0.98);
     animation-iteration-count: 1;
     animation-direction: normal;
     animation-fill-mode: both;
 }
 
-@keyframes slideIn {
-    from{
-        transform: rotateY(90deg);
-        
-    }
+#button_box{
+    position: absolute;
+    z-index: 2;
 
-    to{
-        transform: rotateY(0deg);
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .button{
     background-color: #191C25;
     color: white;
 
-    width: 20rem;
-    height: 3rem;
-    margin: 0.4rem;
+    width: 15rem;
+    height: 2rem;
+    margin: 0.6rem;
+    padding: 0 1rem;
 
     border-radius: 8px;
 
@@ -69,11 +123,30 @@
     transform-origin: center right;
 
     animation-name: slideIn;
-    animation-duration: 0.5s;
+    animation-duration: 1s;
     animation-timing-function: cubic-bezier(0, 1.06, 1, 1);
     animation-iteration-count: 1;
     animation-direction: normal;
     animation-fill-mode: backwards;
+    
+    transition: width 0.5s cubic-bezier(0, 1.06, 1, 1), 
+    height 0.5s cubic-bezier(0, 1.06, 1, 1),
+    margin 0.5s cubic-bezier(0, 1.06, 1, 1);
+}
+
+.button:hover{
+    width: 21rem;
+    height: 2.5rem;
+
+    margin: 0.5rem;
+
+    background-color: rgb(137, 172, 172);
+    color:#191C25;
+
+    font-weight: bold;
+
+    box-shadow: inset 0px 0px 48px white,
+    0px 0px 24px rgb(137, 172, 172) ;
 }
 
 #login-button{
@@ -81,9 +154,9 @@
 }
 
 #sign-up-button{
-    animation-delay: 0.3s;
+    animation-delay: 0.2s;
 }
 
 #view-button{
-    animation-delay: 0.5s;
+    animation-delay: 0.3s;
 }
