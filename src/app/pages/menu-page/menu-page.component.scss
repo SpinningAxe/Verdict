@@ -1,3 +1,6 @@
+
+$animationDur: 1.5s;
+
 #container{
     width: 100vw;
     height: 100vh;
@@ -15,17 +18,17 @@
     }
 
     to{
-        transform: rotateZ(-1deg);
+        transform: rotateZ(-2deg);
     }
 }
 
 @keyframes rotateCircle {
     from{
-        transform: rotate(360deg) scaleX(0.1) scaleY(0.1);
+        transform: rotate(360deg) scaleX(0) scaleY(0)
     }
 
     to{
-        transform: rotate(0deg) scaleX(1) scaleY(1);
+        transform: rotate(0deg) scaleX(1) scaleY(1)
     }
 }
 
@@ -56,7 +59,7 @@
     top: -80px;
 
     animation-name: growLine;
-    animation-duration: 2s;
+    animation-duration: $animationDur;
     animation-iteration-count: 1;
     animation-fill-mode: both;
     animation-timing-function: cubic-bezier(0, 0, 0, 0.98);
@@ -67,10 +70,10 @@
     z-index: -2;
 
     animation-name: rotateCircle;
-    animation-duration: 2s;
+    animation-duration: $animationDur;
     animation-iteration-count: 1;
     animation-fill-mode: both;
-    animation-timing-function: cubic-bezier(0, 0, 0, 0.98);
+    animation-timing-function: cubic-bezier(0, 0, 0, 1);
 }
 
 #button_holder{
@@ -85,7 +88,7 @@
     transform-origin: center center;
 
     animation-name: rotate;
-    animation-duration: 2s;
+    animation-duration: $animationDur;
     animation-timing-function: cubic-bezier(0, 0, 0, 0.98);
     animation-iteration-count: 1;
     animation-direction: normal;
@@ -113,6 +116,8 @@
 
     border-radius: 8px;
 
+    letter-spacing: normal;
+
     text-align: center;
     display: flex;
     align-items: center;
@@ -131,22 +136,27 @@
     
     transition: width 0.5s cubic-bezier(0, 1.06, 1, 1), 
     height 0.5s cubic-bezier(0, 1.06, 1, 1),
-    margin 0.5s cubic-bezier(0, 1.06, 1, 1);
+    margin 0.5s cubic-bezier(0, 1.06, 1, 1),
+    letter-spacing 0.5s cubic-bezier(0, 1.06, 1, 1);
 }
 
 .button:hover{
     width: 21rem;
     height: 2.5rem;
 
+    letter-spacing:5px;
+
+    border-radius: 0;
+
     margin: 0.5rem;
 
     background-color: rgb(137, 172, 172);
-    color:#191C25;
+    color:#3e465d;
 
     font-weight: bold;
 
     box-shadow: inset 0px 0px 48px white,
-    0px 0px 24px rgb(137, 172, 172) ;
+    0px 0px 24px rgb(179, 224, 224) ;
 }
 
 #login-button{

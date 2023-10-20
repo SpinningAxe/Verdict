@@ -1,9 +1,142 @@
-#container{
-    width: 100vw;
-    height: 100vh;
-    background-color: black;
+$animationDur: 1.5s;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@keyframes title {
+  from {
+    letter-spacing: -10px;
+    transform: rotateZ(5deg);
+  }
+  to {
+    letter-spacing: 15px;
+    transform: rotateZ(-3deg);
+  }
+}
+
+@keyframes underline {
+  from {
+    transform: scaleX(0) rotateZ(5deg);
+  }
+  to {
+    transform: scaleX(1) rotateZ(-3deg);
+  }
+}
+
+@keyframes circle {
+    from {
+        transform: scaleX(0) scaleY(0) rotateZ(360deg);
+      }
+      to {
+        transform: scaleX(0.75) scaleY(0.75) rotateZ(1deg);
+      }
+}
+
+@keyframes lines {
+    from {
+        transform: scaleX(0) scaleY(0);
+      }
+      to {
+        transform: scaleX(0.75) scaleY(0.75);
+      }
+}
+
+@keyframes subtitle {
+    from {
+        opacity: 0;
+        transform: scaleX(0.75)
+      }
+      to {
+        opacity: 100;
+        transform: scaleX(1)
+      }
+}
+
+
+#container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #08080f;
+
+  display: flex;
+  overflow: hidden;
+
+  align-items: center;
+  justify-content: center;
+}
+
+#title_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#title {
+    position: relative;
+    z-index: 10;
+  text-align: center;
+  font-size: 100px;
+  font-weight: bold;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: white;
+  text-shadow: 4px 4px 8px #58ffd837;
+
+  animation: title 2s cubic-bezier(0, 0, 0, 1);
+  animation-fill-mode: both;
+}
+
+#underline {
+    position: relative;
+    z-index: 10;
+    animation: underline 2s cubic-bezier(0, 0, 0, 1);
+    animation-fill-mode: both;
+}
+
+#circle{
+    position: absolute;
+    z-index: 1;
+    transform-origin: center center;
+    
+    animation: circle 2s cubic-bezier(0, 0, 0, 1);
+    animation-fill-mode: both;
+}
+
+#lines{
+    transform: scaleX(0.75) scaleY(0.75);
+    position: absolute;
+    z-index: 2;
+
+    transform-origin: center center;
+
+    animation: lines 2s cubic-bezier(0, 0, 0, 1);
+    animation-fill-mode: both;
+}
+#subtitle {
+    margin-top: 1rem;
+    position: relative;
+    z-index: 2;
+  text-align: center;
+  color: white;
+  line-height: 167%;
+}
+#uppertext {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 100;
+  letter-spacing: 2px;
+
+    transform-origin: center top;
+
+  animation: subtitle 1s cubic-bezier(0, 0, 0, 1);
+    animation-fill-mode: both;
+    animation-delay: 1s;
+}
+#lowertext {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+
+  transform-origin: center top;
+
+  animation: subtitle 1s cubic-bezier(0, 0, 0, 1);
+    animation-fill-mode: both;
+    animation-delay: 2s;
 }
