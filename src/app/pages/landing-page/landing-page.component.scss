@@ -1,55 +1,5 @@
 $animationDur: 1.5s;
 
-@keyframes title {
-  from {
-    letter-spacing: -10px;
-    transform: rotateZ(5deg);
-  }
-  to {
-    letter-spacing: 15px;
-    transform: rotateZ(-3deg);
-  }
-}
-
-@keyframes underline {
-  from {
-    transform: scaleX(0) rotateZ(5deg);
-  }
-  to {
-    transform: scaleX(1) rotateZ(-3deg);
-  }
-}
-
-@keyframes circle {
-    from {
-        transform: scaleX(0) scaleY(0) rotateZ(360deg);
-      }
-      to {
-        transform: scaleX(0.75) scaleY(0.75) rotateZ(1deg);
-      }
-}
-
-@keyframes lines {
-    from {
-        transform: scaleX(0) scaleY(0);
-      }
-      to {
-        transform: scaleX(0.75) scaleY(0.75);
-      }
-}
-
-@keyframes subtitle {
-    from {
-        opacity: 0;
-        transform: scaleX(0.75)
-      }
-      to {
-        opacity: 100;
-        transform: scaleX(1)
-      }
-}
-
-
 #container {
   width: 100vw;
   height: 100vh;
@@ -60,6 +10,30 @@ $animationDur: 1.5s;
 
   align-items: center;
   justify-content: center;
+
+  flex-direction: column;
+}
+@keyframes title {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes horizonLine {
+  from {
+    transform-origin: center center;
+    height: 0px;
+    transform: scaleX(0) translateY(-2.1rem);
+  }
+  to {
+    transform-origin: center center;
+    height: 2px;
+    transform: scaleX(1) translateY(-2.1rem);
+    box-shadow: 0px 0px 24px 0px rgba(255, 255, 255, 0.41);
+  }
 }
 
 #title_box {
@@ -70,73 +44,106 @@ $animationDur: 1.5s;
 }
 
 #title {
-    position: relative;
-    z-index: 10;
+  position: relative;
+  z-index: 10;
   text-align: center;
   font-size: 100px;
   font-weight: bold;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Times New Roman", Times, serif;
   color: white;
-  text-shadow: 4px 4px 8px #58ffd837;
+  text-shadow: 0px -6px 34px rgba(88, 255, 215, 0.4);
 
-  animation: title 2s cubic-bezier(0, 0, 0, 1);
+  animation: title $animationDur cubic-bezier(0, 0, 0, 1);
   animation-fill-mode: both;
 }
 
-#underline {
-    position: relative;
-    z-index: 10;
-    animation: underline 2s cubic-bezier(0, 0, 0, 1);
-    animation-fill-mode: both;
-}
+#horizonLine {
+  position: absolute;
+  z-index: 10;
 
-#circle{
-    position: absolute;
-    z-index: 1;
-    transform-origin: center center;
-    
-    animation: circle 2s cubic-bezier(0, 0, 0, 1);
-    animation-fill-mode: both;
-}
-
-#lines{
-    transform: scaleX(0.75) scaleY(0.75);
-    position: absolute;
-    z-index: 2;
-
-    transform-origin: center center;
-
-    animation: lines 2s cubic-bezier(0, 0, 0, 1);
-    animation-fill-mode: both;
-}
-#subtitle {
-    margin-top: 1rem;
-    position: relative;
-    z-index: 2;
-  text-align: center;
+  width: 100vw;
   color: white;
-  line-height: 167%;
+  background-color: white;
+
+  transform-origin: center center;
+
+  animation: horizonLine 1s cubic-bezier(1, 0, 0, 1);
+  animation-fill-mode: both;
+  animation-delay: 1s;
 }
-#uppertext {
-  text-align: center;
-  font-size: 18px;
-  font-weight: 100;
-  letter-spacing: 2px;
 
-    transform-origin: center top;
-
-  animation: subtitle 1s cubic-bezier(0, 0, 0, 1);
-    animation-fill-mode: both;
-    animation-delay: 1s;
+@keyframes subtitle {
+  from {
+    opacity: 0;
+    transform: scale(1.2)
+  }
+  to {
+    transform: scale(1)
+  }
 }
-#lowertext {
+
+#subtitle {
+  position: relative;
+  z-index: 10;
   text-align: center;
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 30px;
+  font-weight: normal;
+  font-family: "Times New Roman", Times, serif;
+  color: white;
 
-  transform-origin: center top;
+  cursor: default;
 
-  animation: subtitle 1s cubic-bezier(0, 0, 0, 1);
-    animation-fill-mode: both;
-    animation-delay: 2s;
+  animation: subtitle 0.5s cubic-bezier(1, 0, 0, 1);
+  animation-fill-mode: both;
+  animation-delay: $animationDur * 1.5;
+}
+
+@keyframes subtitleHolder {
+  from {
+    opacity: 0;
+    transform: scale(1.2) translateY(0.15rem);
+  }
+  to {
+    transform: scale(1) translateY(0.15rem);
+  }
+}
+#subtitleHolder{
+  position: absolute;
+  animation: subtitleHolder 0.5s cubic-bezier(1, 0, 0, 1);
+  animation-fill-mode: both;
+  animation-delay: $animationDur * 1.5;
+}
+
+@keyframes subtitleDecorLeft {
+  from {
+    opacity: 0;
+    transform: translateX(0) translateY(0.8rem);
+  }
+  to {
+    transform: translateX(-6.5rem) translateY(0.8rem);
+  }
+}
+
+@keyframes subtitleDecorRight {
+  from {
+    opacity: 0;
+    transform: translateX(0) translateY(-0.8rem);
+  }
+  to {
+    transform: translateX(6.5rem) translateY(-0.8rem);
+  }
+}
+
+#subtitleDecorLeft {
+  position: absolute;
+  animation: subtitleDecorLeft 0.5s cubic-bezier(1, 0, 0, 1);
+  animation-fill-mode: both;
+  animation-delay: $animationDur * 1.5;
+}
+
+#subtitleDecorRight {
+  position: absolute;
+  animation: subtitleDecorRight 0.5s cubic-bezier(1, 0, 0, 1);
+  animation-fill-mode: both;
+  animation-delay: $animationDur * 1.5;
 }
