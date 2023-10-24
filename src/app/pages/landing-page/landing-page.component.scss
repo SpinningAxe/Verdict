@@ -1,19 +1,7 @@
 $animationDur: 1.5s;
+$shortAnimateDur: 0.2s;
 
-#container {
-  width: 100vw;
-  height: 100vh;
-  background-color: #08080f;
-
-  display: flex;
-  overflow: hidden;
-
-  align-items: center;
-  justify-content: center;
-
-  flex-direction: column;
-}
-@keyframes title {
+@keyframes big-to-small {
   from {
     transform: scale(1.2);
   }
@@ -22,57 +10,157 @@ $animationDur: 1.5s;
   }
 }
 
+.appear-animate {
+  animation-name: big-to-small;
+
+}
+
 @keyframes horizonLine {
   from {
-    transform: scaleX(0) translateY(-1.7rem);
+    transform: scaleX(0) translateY(-1.6rem);
+    box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.41);
   }
   to {
-    transform: scaleX(1) translateY(-1.7rem);
+    transform: scaleX(1) translateY(-1.6rem);
     box-shadow: 0px 0px 24px 0px rgba(255, 255, 255, 0.41);
   }
 }
 
-.title_box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-#title {
-  position: relative;
-  z-index: 10;
+.horizon-animate{
+  animation: horizonLine;
 
 }
 
 #horizonLine {
   position: absolute;
 
-  height: 3px;
+  height: 4px;
   width: 100vw;
-  color: white;
   background-color: white;
-
-  transform-origin: center center;
-
-  animation: horizonLine 1s cubic-bezier(1, 0, 0, 1);
-  animation-fill-mode: both;
-  animation-delay: 1s;
 }
 
-@keyframes subtitle {
+@keyframes lower {
   from {
-    opacity: 0;
-    transform: scaleX(1.2)
+    opacity: 1;
   }
   to {
-    transform: scaleX(1)
+    opacity: 0;
+    transform: translateY(5rem);
   }
+}
+
+.lower-animate {
+  animation-name: lower;
+}
+
+@keyframes lean-left {
+  from {
+  }
+  to {
+    transform: translateX(-1rem);
+  }
+}
+
+.lean-left-animate{
+  animation-name: lean-left;
+
+}
+
+@keyframes lean-right {
+  from {
+  }
+  to {
+    transform: translateX(1rem);
+  }
+}
+
+.lean-right-animate{
+  animation-name: lean-right;
+
+}
+
+@keyframes fade-out {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.fade-out-animate{
+  animation-name: fade-out;
+
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in-animate{
+  animation-name: fade-in;
+
+}
+
+@keyframes subtitleHolder {
+  from {
+    transform: translateY(0.15rem);
+  }
+  to {
+    transform: translateY(0.15rem);
+  }
+}
+
+@keyframes disapear {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.animate-speed-1001 {
+  animation-timing-function: cubic-bezier(1, 0, 0, 1);
+  animation-fill-mode: both;
+}
+
+.animate-speed-0001 {
+  animation-timing-function: cubic-bezier(0, 0, 0, 1);
+  animation-fill-mode: both;
+}
+
+.center-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform-origin: center center;
+}
+
+#container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #08080f;
+
+  overflow: hidden;
+
+  flex-direction: column;
 }
 
 #subtitle {
   position: absolute;
-  z-index: 10;
+  z-index: 2;
+
   text-align: center;
   font-size: 30px;
   font-weight: normal;
@@ -81,119 +169,60 @@ $animationDur: 1.5s;
 
   cursor: pointer;
 
-  animation: subtitle 0.5s cubic-bezier(1, 0, 0, 1);
-  animation-fill-mode: both;
-  animation-delay: $animationDur * 1.5;
 }
 
-@keyframes subtitleHolder {
-  from {
-    opacity: 0;
-    transform: scale(1.2) translateY(0.15rem);
-  }
-  to {
-    transform: scale(1) translateY(0.15rem);
-  }
-}
-#subtitleHolder{
+#subtitleBackdrop{
   position: absolute;
-  animation: subtitleHolder 0.5s cubic-bezier(1, 0, 0, 1);
-  animation-fill-mode: both;
-  animation-delay: $animationDur * 1.5;
-}
+  z-index: 1;
 
-@keyframes subtitleDecorLeft {
-  from {
-    opacity: 0;
-    transform: translateX(0) translateY(0.8rem);
-  }
-  to {
-    transform: translateX(-6.5rem) translateY(0.8rem);
-  }
-}
-
-@keyframes subtitleDecorRight {
-  from {
-    opacity: 0;
-    transform: translateX(0) translateY(-0.8rem);
-  }
-  to {
-    transform: translateX(6.5rem) translateY(-0.8rem);
-  }
 }
 
 #subtitleDecorLeft {
-  position: absolute;
-  animation: subtitleDecorLeft 0.5s cubic-bezier(1, 0, 0, 1);
-  animation-fill-mode: both;
-  animation-delay: $animationDur * 1.5;
+  position: relative;
+  bottom: 0.4rem;
+  right: 6rem;
 
-  transition: margin-right 0.3s cubic-bezier(1, 0, 0, 1);
+  transition: right 0.3s cubic-bezier(1, 0, 0, 1);
 }
 
 #subtitleDecorRight {
-  position: absolute;
-  animation: subtitleDecorRight 0.5s cubic-bezier(1, 0, 0, 1);
-  animation-fill-mode: both;
-  animation-delay: $animationDur * 1.5;
+  position: relative;
+  top: 0.4rem;
+  left: 6rem;
 
-  transition: margin-left 0.3s cubic-bezier(1, 0, 0, 1);
+  transition: left 0.3s cubic-bezier(1, 0, 0, 1);
 }
 
-.subtitle_box{
-  width: 30rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+#subtitle_box{
+  flex-direction: column;
+  
+  width: max-content;
+  height: max-content;
+
+  margin-top: 6rem;
 }
 
-.subtitle_box:hover{
-  #subtitleDecorLeft{
-    margin-right: 3rem;
+#subtitle_box:hover {
+  #subtitleDecorLeft {
+    right: 7rem;
   }
-  #subtitleDecorRight{
-    margin-left: 3rem;
-  }
-
-}
-
-@keyframes disapear{
-  from{
-    transform: scale(1);
-    opacity: 1;
-  }
-  to{
-    transform: scale(1.5);
-    opacity: 0;
+  #subtitleDecorRight {
+    left: 7rem;
   }
 }
 
-.diaspear-animation{
-  animation-name: disapear;
+.slow-animate-dur{
+  animation-duration: 1.5s;
+}
+
+.fast-animate-dur{
   animation-duration: 0.5s;
-  animation-fill-mode: both;
-  animation-timing-function: cubic-bezier(0,0,0,1);
 }
 
-.appear-animation{
-  animation: title $animationDur cubic-bezier(0, 0, 0, 1);
-  animation-fill-mode: both;
+.delay-after-title{
+  animation-delay: 1s;
 }
 
-@keyframes lower{
-  from{
-    
-    opacity: 1;
-  }
-  to{
-    transform: translateY(5rem);
-    opacity: 0;
-  }
-}
-
-.lower-animation{
-  animation-name: lower;
-  animation-duration: 0.5s;
-  animation-fill-mode: both;
-  animation-timing-function: cubic-bezier(0,0,0,1);
+.delay-after-horizon{
+  animation-delay: 2s;
 }

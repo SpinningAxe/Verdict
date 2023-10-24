@@ -9,18 +9,14 @@ import { Router } from '@angular/router';
 export class LandingPageComponent {
   constructor(private route: Router) { }
 
-  gotomenu(){
-    
-    this.route.navigate(['menu-page'])
-  }
-
   async navigateTo(){
-    let element = document.getElementById("title");
-    element!.classList.remove("appear-animation");
-    element!.classList.add("diaspear-animation");
-    
-    let elementSub = document.getElementById("subtitle_box");
-    elementSub!.classList.add("lower-animation");
+    let title = document.getElementById("title");
+    title!.classList.remove("appear-animate", "animate-speed-1001", "slow-animate-dur");
+    title!.classList.add("fade-out-animate", "animate-speed-0001", "fast-animate-dur");
+
+    let subtitle = document.getElementById("subtitle_box");
+    subtitle!.classList.remove("fade-in-animate", "animate-speed-1001","delay-after-horizon", "slow-animate-dur");
+    subtitle!.classList.add("lower-animate", "animate-speed-0001", "fast-animate-dur");
 
     setTimeout(() =>{
       this.route.navigate(['menu-page'])
