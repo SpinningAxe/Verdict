@@ -17,7 +17,7 @@ export class LandingPageComponent {
     let subtitle = document.getElementById("subtitle_box");
     subtitle!.classList.remove("fade-in-animate", "animate-speed-1001","delay-after-horizon", "slow-animate-dur");
     subtitle!.classList.add("lower-animate", "animate-speed-0001", "fast-animate-dur");
-
+    
     setTimeout(() =>{
       this.route.navigate(['menu-page'])
     }, 500) 
