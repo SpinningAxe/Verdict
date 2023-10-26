@@ -1,42 +1,202 @@
-.animate-speed-1001 {
-  animation-timing-function: cubic-bezier(1, 0, 0, 1);
-  animation-fill-mode: both;
-}
+$scale: 0.6;
+$appearDur: 0.7s;
 
-.animate-speed-0001 {
-  animation-timing-function: cubic-bezier(0, 0, 0, 1);
-  animation-fill-mode: both;
-}
-@keyframes scale-up {
+@keyframes circle-animation{
   from{
-    scale: 0;
+    transform: scale(0) rotate(180deg) translateX(-2rem) translateY(-2rem);
   }
   to{
-    scale: 1;
+    transform: scale(1) rotate(0deg) translateX(-2rem) translateY(-2rem);
   }
 }
 
-.scale-up-animation{
-  animation-name: scale-up;
-  animation-duration: 0.3s;
+.buttonHolder-circle-appear-animation{
+  animation-name: circle-animation;
+  animation-duration: $appearDur*2;
+  animation-timing-function: cubic-bezier(0,0,0,1);
+  animation-delay: 0s;
+  animation-fill-mode: both;
 }
+
+@keyframes line-animation{
+  from{
+    transform: scale(0) rotate(20deg) translateX(13rem) translateY(-12rem);
+  }
+  to{
+    transform: scale(1) rotate(-10deg) translateX(3rem) translateY(-2rem);
+  }
+}
+
+.buttonHolder-line-appear-animation{
+  animation-name: line-animation;
+  animation-duration: $appearDur*2;
+  animation-timing-function: cubic-bezier(0,0,0,1);
+  animation-delay: 0s;
+  animation-fill-mode: both;
+}
+
+@keyframes glassPieces-animation{
+  from{
+    transform: scale(0.1) rotate(40deg);
+  }
+  to{
+    transform: scale(0.8) rotate(10deg) translateX(-3rem);
+  }
+}
+
+.buttonHolder-glassPieces-appear-animation{
+  animation-name: glassPieces-animation;
+  animation-duration: $appearDur*3;
+  animation-timing-function: cubic-bezier(0,0,0,1);
+  animation-delay: 0s;
+  animation-fill-mode: both;
+}
+
+@keyframes voidPiece1-animation{
+  from{
+    transform: scale(0.1) rotate(60deg) translateY(2rem);
+  }
+  to{
+    transform: scale(1) rotate(0deg) translateY(2rem);
+  }
+}
+
+.voidPiece-1-appear-animation{
+  animation-name: voidPiece1-animation;
+  animation-duration: $appearDur*2;
+  animation-timing-function: cubic-bezier(0, 0, 0, 0.95);
+  animation-delay: 0s;
+  animation-fill-mode: both;
+}
+
+@keyframes voidPiece2-animation{
+  from{
+    transform: scale(0.1) rotate(-60deg) translateY(7rem);
+  }
+  to{
+    transform: scale(1) rotate(0deg) translateY(7rem);
+  }
+}
+
+.voidPiece-2-appear-animation{
+  animation-name: voidPiece2-animation;
+  animation-duration: $appearDur*2.5;
+  animation-timing-function: cubic-bezier(0, 0, 0, 0.95);
+  animation-delay: 0s;
+  animation-fill-mode: both;
+}
+
+@keyframes background-animation{
+  from{
+    opacity: 0;
+    transform: scaleY(0.1) translateX(-2rem);
+  }
+  to{
+    opacity: 1;
+    transform: scaleY(1) translateX(-2rem);
+  }
+}
+
+.background-appear-animation{
+  animation-name: background-animation;
+  animation-duration: $appearDur*2.5;
+  animation-timing-function: cubic-bezier(0, 0, 0, 0.95);
+  animation-delay: 0s;
+  animation-fill-mode: both;
+}
+
+@keyframes login-button-animation{
+  from{
+    transform-origin: right center;
+    transform: scaleX(0) translateY(-2rem) translateX(18rem);
+  }
+  to{
+    transform-origin: right center;
+    transform: scaleX(1) translateY(-7rem);
+  }
+}
+
+.login-button-appear-animation{
+  animation-name: login-button-animation;
+  animation-duration: $appearDur;
+  animation-timing-function: cubic-bezier(0, 0, 0, 1);
+  animation-delay: 0s;
+  animation-fill-mode: both;
+}
+
+@keyframes sign-up-button-animation{
+  from{
+    transform-origin: right center;
+    transform: scaleX(0) translateX(18rem);
+  }
+  to{
+    transform-origin: right center;
+    transform: scaleX(1);
+  }
+}
+
+.sign-up-button-appear-animation{
+  animation-name: sign-up-button-animation;
+  animation-duration: $appearDur;
+  animation-timing-function: cubic-bezier(0, 0, 0, 1);
+  animation-delay: 0.1s;
+  animation-fill-mode: both;
+}
+
+@keyframes view-aa-button-animation{
+  from{
+    transform-origin: right center;
+    transform: scaleX(0) translateY(2rem) translateX(18rem);
+  }
+  to{
+    transform-origin: right center;
+    transform: scaleX(1) translateY(7rem);
+  }
+}
+
+.view-aa-button-appear-animation{
+  animation-name: view-aa-button-animation;
+  animation-duration: $appearDur;
+  animation-timing-function: cubic-bezier(0, 0, 0, 1);
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+}
+
+@keyframes buttonContainer-animation{
+  from{
+    transform-origin: right center;
+    transform: rotate(30deg) translateY(3rem) translateX(8rem);
+  }
+  to{
+    transform: rotate(3deg)
+  }
+}
+
+.buttonContainer-appear-animation{
+  animation-name: buttonContainer-animation;
+  animation-duration: $appearDur;
+  animation-timing-function: cubic-bezier(0, 0, 0, 1);
+  animation-delay: 0;
+  animation-fill-mode: both;
+}
+
 
 #horizonLine {
   position: absolute;
-
+  z-index: 0;
   height: 4px;
   width: 100vw;
 
   background-color: white;
-  box-shadow: 0px 0px 50px rgba(88, 255, 215, 0.40);;
+  box-shadow: 0px 0px 24px rgba(88, 255, 215, 0.40); 
 
-  transform: translateY(-6.95rem);
+  transform: translateY(-6rem);
 }
 
 .center-center{
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 #container {
@@ -44,311 +204,114 @@
   height: 100vh;
   background-color: #08080f;
 
-  flex-direction: row-reverse;
+  overflow: hidden;
+
+  flex-direction: row;
+}
+
+#left-content{
+  width: 50%;
+  height: 100%;
+}
+
+#right-content{
+  width: 50%;
+  height: 100%; 
 
   overflow: hidden;
-}
-#button-box{
-  flex-direction: column;
+
+  transform: translateX(3rem) translateY(-2rem);
 }
 
 #button-container{
-  position: relative;
-  z-index: 1;
-
-  // transform: rotate(-2deg);
-}
-
-.button{
+  flex-direction: column;
   position: absolute;
-  
-  color: white;
-  padding: 0.5rem;
-  cursor: pointer;
-
-  margin: 1rem;
-
-  transition:
-  width 0.3s cubic-bezier(0,0,0,1),
-  letter-spacing 0.3s cubic-bezier(0,0,0,1)
+  z-index: 89;
 }
-p{
+
+.button-title{
   position: absolute;
-  z-index: 1;
-}
-
-.button-background{
-  height: 2.5rem;
-  width: 18rem;
-  position: absolute;
-  z-index: 0;
-}
-
-.button:hover{
-  .button-background{
-    display: none;
-  }
-
-  height: 3rem;
-  width: 28rem;
-
   z-index: 99;
 
-  border-radius: 0 0 0 0;
-
-  background-color: white;
-  color: #3e465d;
-
-  text-shadow: none;
-
-  letter-spacing: 8px;
-
-  box-shadow: inset 0px 0px 48px rgb(178, 225, 225), 0px 0px 50px rgba(88, 255, 215, 0.40);;
+  cursor: pointer;
 }
 
-.login-button{
-  animation-delay: 0.2s;
-
-  transform: translateY(-4rem);
-
-  // background-color: #191C25;
-  // border-radius: 0 15px 15px 0;
-
-  height: 2.5rem;
-  width: 14rem;
-
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  // text-shadow: 6px 5px 0px #08080f;
-  letter-spacing: 6px;
-  font-size: 28px;
-  font-weight: bold;
-
-  transform-origin: center center;
-}
-
-.signup-button{
-  animation-delay: 0.3s;
-
-  // border-radius: 0 15px 15px 0;
-  
-  height: 2.5rem;
-  width: 14rem;
-
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  // text-shadow: 6px 5px 0px #08080f;
-  letter-spacing: 6px;
-  font-size: 36px;
-  font-weight: bold;
-  text-align: center;
-
-  transform-origin: center center;
-}
-
-.viewAsAnnon-button{
-  animation-delay: 0.4s;
-
-  transform: translateY(4rem);
-  
-  height: 2.5rem;
-  width: 14rem;
-
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  letter-spacing: 2px;
-  font-size: 18px;
-
-  white-space: nowrap; 
-
-  transform-origin: center center;
-}
-
-#blackPage{
+.button-placard{
   position: absolute;
-  z-index: 0;
+  z-index: 90;
 
-  width: 30rem;
-  height: 35rem;
-
-  filter: blur(10px);
-  
-  background-color: #08060e;
-
-  // transform: skew(-2deg,-3deg);
+  filter: blur(1px);
+  cursor: pointer;
 }
 
-// @keyframes rotate {
-//   from {
-//     transform: rotateZ(-25deg);
-//   }
+#login-title{
+  transform: translateX(-1rem);
+}
 
-//   to {
-//     transform: rotateZ(-2deg);
-//   }
+#sign-up-title{
+  transform: translateX(-3rem);
+}
+
+// #view-aa-title{
 // }
 
-// @keyframes rotateCircle {
-//   from {
-//     transform: rotate(360deg) scaleX(0) scaleY(0);
-//   }
+#login-button{
+  scale: $scale;
+  transform: translateY(-7rem);
+}
 
-//   to {
-//     transform: rotate(0deg) scaleX(1) scaleY(1);
-//   }
-// }
+#sign-up-button{
+  scale: $scale;
+}
 
-// @keyframes growLine {
-//   from {
-//     transform: scaleX(0) scaleY(0);
-//   }
+#view-aa-button{
+  scale: $scale;
+  transform: translateY(7rem);
+}
 
-//   to {
-//     transform: scaleX(1) scaleY(1);
-//   }
-// }
+#buttonHolder-circle{
+  position: absolute;
+  z-index: 80;
+  scale: $scale;
 
-// @keyframes slideIn {
-//   from {
-//     transform: rotateY(90deg) translateX(10rem) translateY(-1rem);
-//   }
+  transform: translateX(-2rem) translateY(-2rem);
+}
 
-//   to {
-//     transform: rotateY(2deg) translateX(0rem) translateY(0rem);
-//   }
-// }
+#buttonHolder-line{
+  position: absolute;
+  z-index: 80;
+  transform: translateX(3rem) translateY(-2rem);
 
-// #lines {
-//   position: relative;
-//   z-index: -1;
+  scale: $scale;
+}
 
-//   top: -80px;
+#buttonHolder-glassPieces{
+  position: absolute;
+  z-index: 81;
+  scale: $scale;
+}
 
-//   animation-name: growLine;
-//   animation-duration: $animationDur;
-//   animation-iteration-count: 1;
-//   animation-fill-mode: both;
-//   animation-timing-function: cubic-bezier(0, 0, 0, 0.98);
+#buttonHolder-background{
+  position: absolute;
+  z-index: 10;
+  scale: $scale;
 
-//   animation-delay: 0.5s;
-// }
+  transform: translateX(-2rem);
+  filter: blur(3px) brightness(50%);
+}
 
-// #circle {
-//   position: absolute;
-//   z-index: -2;
+#voidPiece-1{
+  position: absolute;
+  z-index: 71;
+  scale: $scale;
 
-//   animation-name: rotateCircle;
-//   animation-duration: $animationDur;
-//   animation-iteration-count: 1;
-//   animation-fill-mode: both;
-//   animation-timing-function: cubic-bezier(0, 0, 0, 1);
+  transform: translateY(2rem);
+}
 
-// }
+#voidPiece-2{
+  position: absolute;
+  z-index: 70;
+  scale: $scale;
 
-// #button_holder {
-//   width: 30rem;
-//   height: max-content;
-
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   flex-direction: column;
-
-//   transform-origin: center center;
-
-//   animation-name: rotate;
-//   animation-duration: $animationDur;
-//   animation-timing-function: cubic-bezier(0, 0, 0, 0.98);
-//   animation-iteration-count: 1;
-//   animation-direction: normal;
-//   animation-fill-mode: both;
-
-// }
-
-// #button_box {
-//   position: absolute;
-//   z-index: 2;
-
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   flex-direction: column;
-// }
-
-// .button {
-//   background-color: #191c25;
-//   color: white;
-
-//   width: 15rem;
-//   height: 2rem;
-//   margin: 0.6rem;
-//   padding: 0 1rem;
-
-//   border-radius: 8px;
-
-//   letter-spacing: normal;
-
-//   text-align: center;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-
-//   cursor: pointer;
-
-//   transform-origin: center right;
-
-//   animation-name: slideIn;
-//   animation-duration: 1s;
-//   animation-timing-function: cubic-bezier(0, 1.06, 1, 1);
-//   animation-iteration-count: 1;
-//   animation-direction: normal;
-//   animation-fill-mode: backwards;
-
-//   transition: width 0.5s cubic-bezier(0, 1.06, 1, 1),
-//     height 0.5s cubic-bezier(0, 1.06, 1, 1),
-//     margin 0.5s cubic-bezier(0, 1.06, 1, 1),
-//     letter-spacing 0.5s cubic-bezier(0, 1.06, 1, 1);
-// }
-
-// .button:hover {
-//   width: 21rem;
-//   height: 2.5rem;
-
-//   letter-spacing: 5px;
-
-//   border-radius: 0;
-
-//   margin: 0.5rem;
-
-//   background-color: rgb(137, 172, 172);
-//   color: #3e465d;
-
-//   font-weight: bold;
-
-//   box-shadow: inset 0px 0px 48px white, 0px 0px 24px rgb(179, 224, 224);
-// }
-
-// #login-button {
-//   animation-delay: 0.1s;
-// }
-
-// #sign-up-button {
-//   animation-delay: 0.2s;
-// }
-
-// #view-button {
-//   animation-delay: 0.3s;
-// }
-
-// #horizonLine {
-//   position: absolute;
-//   z-index: 10;
-
-//   width: 100vw;
-//   color: white;
-//   background-color: white;
-
-//   transform-origin: center center;
-
-//   transform-origin: center center;
-//   height: 3px;
-//   transform: scaleX(1) translateY(-4.7rem);
-//   box-shadow: 0px 0px 24px 0px rgba(255, 255, 255, 0.41);
-// }
+  transform: translateY(7rem);
+}
