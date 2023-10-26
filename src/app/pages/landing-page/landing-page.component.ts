@@ -20,6 +20,6 @@ export class LandingPageComponent {
     
     setTimeout(() =>{
       this.route.navigate(['menu-page'])
-    }, 500) 
+    }, 200) 
   }
 }

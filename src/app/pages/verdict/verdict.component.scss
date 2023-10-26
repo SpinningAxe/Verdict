@@ -6,22 +6,13 @@
         height: 80vh;
         transform:  translateY(0);
         box-shadow: none;
-        background-color: rgb(220, 238, 234)
-    }
-}
-
-@keyframes manifest-destiny-color {
-    0%{
-        background-color: white; 
-    }
-    100%{
-        background-color: gray;
+        background-color: rgb(246, 255, 253)
     }
 }
 
 .manifest-destiny{
     animation-name: manifest-destiny;
-    animation-duration: 3s;
+    animation-duration: 1s;
     animation-timing-function: cubic-bezier(1, 0, 0, 1);
     animation-fill-mode: both;
 }
