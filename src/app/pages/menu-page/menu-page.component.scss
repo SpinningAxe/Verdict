@@ -1,5 +1,5 @@
 $scale: 0.6;
-$appearDur: 0.7s;
+$appearDur: 1s;
 
 @keyframes circle-animation{
   from{
@@ -107,79 +107,72 @@ $appearDur: 0.7s;
 
 @keyframes login-button-animation{
   from{
-    transform-origin: right center;
-    transform: scaleX(0) translateY(-2rem) translateX(18rem);
+    transform: translateY(-4rem) translateX(18rem);
   }
   to{
-    transform-origin: right center;
-    transform: scaleX(1) translateY(-7rem);
+    transform:translateY(-8rem) rotate(-3deg);
   }
 }
 
 .login-button-appear-animation{
   animation-name: login-button-animation;
   animation-duration: $appearDur;
-  animation-timing-function: cubic-bezier(0, 0, 0, 1);
+  animation-timing-function: ease;
   animation-delay: 0s;
   animation-fill-mode: both;
 }
 
 @keyframes sign-up-button-animation{
   from{
-    transform-origin: right center;
-    transform: scaleX(0) translateX(18rem);
+    transform: translateX(18rem);
   }
   to{
-    transform-origin: right center;
-    transform: scaleX(1);
+
   }
 }
 
 .sign-up-button-appear-animation{
   animation-name: sign-up-button-animation;
   animation-duration: $appearDur;
-  animation-timing-function: cubic-bezier(0, 0, 0, 1);
-  animation-delay: 0.1s;
+  animation-timing-function: ease;
+  animation-delay: 0.2s;
   animation-fill-mode: both;
 }
 
 @keyframes view-aa-button-animation{
   from{
-    transform-origin: right center;
-    transform: scaleX(0) translateY(2rem) translateX(18rem);
+    transform: translateY(10rem) translateX(18rem);
   }
   to{
-    transform-origin: right center;
-    transform: scaleX(1) translateY(7rem);
+    transform:  translateY(8rem) rotate(3deg);
   }
 }
 
 .view-aa-button-appear-animation{
   animation-name: view-aa-button-animation;
   animation-duration: $appearDur;
-  animation-timing-function: cubic-bezier(0, 0, 0, 1);
-  animation-delay: 0.2s;
+  animation-timing-function: ease;
+  animation-delay: 0.4s;
   animation-fill-mode: both;
 }
 
 @keyframes buttonContainer-animation{
   from{
     transform-origin: right center;
-    transform: rotate(30deg) translateY(3rem) translateX(8rem);
+    transform: scale(0) rotate(10deg) translateY(-3rem) translateX(8rem);
   }
   to{
-    transform: rotate(3deg)
+    transform: scale(1) rotate(3deg)
   }
 }
 
 .buttonContainer-appear-animation{
   animation-name: buttonContainer-animation;
   animation-duration: $appearDur;
-  animation-timing-function: cubic-bezier(0, 0, 0, 1);
+  animation-timing-function: ease;
   animation-delay: 0;
   animation-fill-mode: both;
 }
-
 
 #horizonLine {
   position: absolute;

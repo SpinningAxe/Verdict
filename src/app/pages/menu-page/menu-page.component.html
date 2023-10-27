@@ -1,12 +1,27 @@
 <div id="container" class="center-center">
     <div id="horizonLine"></div>
+
     <div id="left-content" class="center-center"></div>
+
     <div id="right-content" class="center-center button-holder-appear-animation">
         
         <div id="button-container" class="center-center buttonContainer-appear-animation">
-            <div id="login-button" class="center-center login-button-appear-animation"><img src="./assets/Login-Title.png" id="login-title" class="button-title"><img src="./assets/Login-Button.png" class="button-placard"></div>
-            <div id="sign-up-button" class="center-center sign-up-button-appear-animation"><img src="./assets/Sign-Up-Title.png" id="sign-up-title" class="button-title"><img src="./assets/Sign-Up-Button.png" class="button-placard"></div>
-            <div id="view-aa-button" class="center-center view-aa-button-appear-animation"><img src="./assets/View-AA-Title.png" id="view-aa-title" class="button-title"><img src="./assets/View-AA-Button.png" class="button-placard"></div>
+
+            <div id="login-button" class="center-center login-button-appear-animation" (click)="navigateToLogin()">
+                <img src="./assets/Login-Title.png" id="login-title" class="button-title">
+                <img src="./assets/Login-Button.png" class="button-placard">
+            </div>
+
+            <div id="sign-up-button" class="center-center sign-up-button-appear-animation" (click)="navigateToSignUp()">
+                <img src="./assets/Sign-Up-Title.png" id="sign-up-title" class="button-title">
+                <img src="./assets/Sign-Up-Button.png" class="button-placard">
+            </div>
+
+            <div id="view-aa-button" class="center-center view-aa-button-appear-animation" (click)="navigateToVerdict()">
+                <img src="./assets/View-AA-Title.png" id="view-aa-title" class="button-title">
+                <img src="./assets/View-AA-Button.png" class="button-placard">
+            </div>
+
         </div>
 
         <div id="buttonHolder-circle" class="buttonHolder-circle-appear-animation"><img src="./assets/ButtonHolder-Circle.png"></div>

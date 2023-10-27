@@ -8,7 +8,15 @@ import { Router } from '@angular/router';
 export class MenuPageComponent { 
   constructor(private Router: Router) { }
 
-  navigateTo(path:string){
-    this.Router.navigate([path])
+  navigateToLogin(){
+    this.Router.navigate(['log-in'])
+  }
+
+  navigateToSignUp(){
+    this.Router.navigate(['sign-up'])
+  }
+
+  navigateToVerdict(){
+    this.Router.navigate(['verdict'])
   }
 }
