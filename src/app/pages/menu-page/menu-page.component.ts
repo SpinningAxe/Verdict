@@ -19,4 +19,9 @@ export class MenuPageComponent {
   navigateToVerdict(){
     this.Router.navigate(['verdict'])
   }
+
+  hoverEffect(button:string){
+    let buttonHover = document.getElementById(`${button}`);
+    buttonHover!.classList.remove(`${button}-appear-animation`)
+  }
 }

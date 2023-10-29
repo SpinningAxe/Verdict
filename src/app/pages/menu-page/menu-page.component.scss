@@ -224,7 +224,7 @@ $appearDur: 1s;
 
 .button-title{
   position: absolute;
-  z-index: 99;
+  z-index: 999;
 
   cursor: pointer;
 }
@@ -243,6 +243,17 @@ $appearDur: 1s;
 
 #sign-up-title{
   transform: translateX(-3rem);
+  filter: brightness(0.1);
+}
+
+#sign-up-title-hover{
+  transform: translateX(-3rem);
+  filter: brightness(0.1);
+}
+
+#sign-up-button-hover{
+  position: absolute;
+  z-index: 99;
 }
 
 // #view-aa-title{
@@ -251,10 +262,14 @@ $appearDur: 1s;
 #login-button{
   scale: $scale;
   transform: translateY(-7rem);
+
+  transition: all 0.3s cubic-bezier(1,0,0,1);
 }
 
 #sign-up-button{
   scale: $scale;
+
+  transition: all 0.3s cubic-bezier(1,0,0,1);
 }
 
 #view-aa-button{
