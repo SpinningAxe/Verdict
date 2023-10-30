@@ -9,15 +9,23 @@ export class MenuPageComponent {
   constructor(private Router: Router) { }
 
   navigateToLogin(){
-    this.Router.navigate(['log-in'])
+    setTimeout(() =>{
+      this.Router.navigate(['log-in'])
+    }, 200) 
+    
   }
 
   navigateToSignUp(){
-    this.Router.navigate(['sign-up'])
+    setTimeout(() =>{
+      this.Router.navigate(['sign-up'])
+    }, 200) 
   }
 
   navigateToVerdict(){
-    this.Router.navigate(['verdict'])
+    setTimeout(() =>{
+      this.Router.navigate(['verdict'])
+    }, 200) 
+
   }
 
   hoverEffect(button:string){
