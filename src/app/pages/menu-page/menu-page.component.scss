@@ -20,7 +20,7 @@ $appearDur: 1s;
 
 @keyframes line-animation{
   from{
-    transform: scale(0) rotate(20deg) translateX(13rem) translateY(-12rem);
+    transform: scale(0) rotate(40deg) translateX(13rem) translateY(-12rem);
   }
   to{
     transform: scale(1) rotate(-10deg) translateX(3rem) translateY(-2rem);
@@ -92,7 +92,7 @@ $appearDur: 1s;
     transform: scaleY(0.1) translateX(-2rem);
   }
   to{
-    opacity: 1;
+    opacity: .99;
     transform: scaleY(1) translateX(-2rem);
   }
 }
@@ -243,7 +243,6 @@ $appearDur: 1s;
 
 #sign-up-title{
   transform: translateX(-3rem);
-  filter: brightness(0.1);
 }
 
 #sign-up-title-hover{
@@ -268,8 +267,6 @@ $appearDur: 1s;
 
 #sign-up-button{
   scale: $scale;
-
-  transition: all 0.3s cubic-bezier(1,0,0,1);
 }
 
 #view-aa-button{
@@ -304,8 +301,9 @@ $appearDur: 1s;
   z-index: 10;
   scale: $scale;
 
+  opacity: 0.95;
   transform: translateX(-2rem);
-  filter: blur(3px) brightness(50%);
+  filter: blur(25px) brightness(50%);
 }
 
 #voidPiece-1{
