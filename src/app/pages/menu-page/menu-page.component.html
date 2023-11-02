@@ -17,7 +17,7 @@
                 <img src="./assets/Sign-Up-Button.png" class="button-placard">
             </div>
 
-            <div id="view-aa-button" class="center-center view-aa-button-appear-animation" (click)="navigateToVerdict()">
+            <div id="view-aa-button" class="center-center view-aa-button-appear-animation" (click)="openModal()">
                 <img src="./assets/View-AA-Title.png" id="view-aa-title" class="button-title">
                 <img src="./assets/View-AA-Button.png" class="button-placard">
             </div>
@@ -31,4 +31,52 @@
         <div id="voidPiece-2" class="voidPiece-2-appear-animation"><img src="./assets/VoidPiece-2.png"></div>
         <div id="buttonHolder-background" class="background-appear-animation"><img src="./assets/ButtonHolder-Background.png"></div>
     </div>
+    
+    <div id="checkbox" class="center-center" >
+        <div id="blur-background" (click)="closeModal()"></div>
+        <div id="checkbox-content" class="center-center">
+            
+            <div id="background-container" class="center-center">
+                <img src="./assets/Checkbox-Graphics/Checkbox-VoidPiece-1.png" id="Checkbox-VoidPiece-1" class="pos-absolute">
+                <img src="./assets/Checkbox-Graphics/Checkbox-VoidPiece-2.png" id="Checkbox-VoidPiece-2" class="pos-absolute">
+
+                <img src="./assets/Checkbox-Graphics/Checkbox-Line-1.png" id="Checkbox-Line-1" class="pos-absolute">
+                <img src="./assets/Checkbox-Graphics/Checkbox-Line-2.png" id="Checkbox-Line-2" class="pos-absolute">
+                <img src="./assets/Checkbox-Graphics/Checkbox-Line-3.png" id="Checkbox-Line-3" class="pos-absolute">
+
+                <img src="./assets/Checkbox-Graphics/GlassPieces-1.png" id="GlassPieces-1" class="pos-absolute">
+                <img src="./assets/Checkbox-Graphics/GlassPieces-2.png" id="GlassPieces-2" class="pos-absolute">
+                <img src="./assets/Checkbox-Graphics/GlassPieces-3.png" id="GlassPieces-3" class="pos-absolute">
+            </div> 
+
+            <div id="questionMark-container" class="center-center">
+                <img src="./assets/Checkbox-Graphics/QuestionMark-Holder-Decor.png" id="QuestionMark-Decor" class="pos-absolute">
+                <img src="./assets/Checkbox-Graphics/QuestionMark-Radiant.png" id="QuestionMark-Radiant" class="pos-absolute">
+                <img src="./assets/Checkbox-Graphics/QuestionMark-Background.png" id="QuestionMark-Background" class="pos-absolute">
+                <img src="./assets/Checkbox-Graphics/QuestionMark-Holder.png" id="QuestionMark-Holder" class="pos-absolute">
+                <img src="./assets/Checkbox-Graphics/QuestionMark-Outline.png" id="QuestionMark-Outline" class="pos-absolute">
+                <img src="./assets/Checkbox-Graphics/QuestionMark.png" id="QuestionMark" class="pos-absolute">
+            </div>
+
+            <div id="textbox-container" class="center-center">
+                <img src="./assets/Checkbox-Graphics/TextBox.png" id="TextBox" class="pos-absolute">
+                <img src="./assets/Checkbox-Graphics/TextBox-Outline.png" id="TextBox-Outline" class="pos-absolute">
+                <img src="./assets/Checkbox-Graphics/TextBox-Title.png" id="TextBox-Title" class="pos-absolute">
+            </div>
+
+            <div id="button-container" class="center-center">
+                <img src="./assets/Checkbox-Graphics/Checkbox-Line.png" id="" class="pos-absolute">              
+                <div id="No-checkbox" class="pos-absolute center-center" (click)="closeModal()">
+                    <img src="./assets/Checkbox-Graphics/No-Checkbox.png" id="" class="pos-absolute">
+                    <img src="./assets/Checkbox-Graphics/No-Checkbox-Title.png" id="Checkbox-Title" class="pos-absolute">
+                </div>
+                <div id="Yes-checkbox" class="pos-absolute center-center" (click)="navigateToVerdict()">
+                    <img src="./assets/Checkbox-Graphics/Yes-Checkbox.png" id="" class="pos-absolute">
+                    <img src="./assets/Checkbox-Graphics/Yes-Checkbox-Title.png" id="Checkbox-Title" class="pos-absolute">
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
+

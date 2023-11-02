@@ -207,6 +207,24 @@ $appearDur: 1s;
   height: 100%;
 }
 
+.blur-content{
+  filter: blur(5px);
+}
+
+@keyframes remove-blur {
+  from{
+    filter: blur(5px);
+  }
+  to{
+    filter: blur(0px);
+  }  
+}
+
+.remove-blur-content{
+  animation: remove-blur 1s ease;
+  animation-fill-mode: both;
+}
+
 #right-content{
   width: 50%;
   height: 100%; 
@@ -320,4 +338,115 @@ $appearDur: 1s;
   scale: $scale;
 
   transform: translateY(7rem);
+}
+
+//CHECKBOX CSS____________________________________________________________________________________
+$checkboxScale:.5;
+#checkbox{
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  z-index: 1;
+  
+  overflow: hidden;
+  display: none;
+}
+
+#blur-background{
+  width: 100%;
+  height: 100%;
+  filter: blur(2rem);
+
+  background-color: #3f3636;
+  opacity: .7;
+
+  position: absolute;
+  z-index: 90;
+}
+
+#checkbox-content{
+  position: absolute;
+  z-index: 99;
+  scale: $checkboxScale;
+}
+
+.pos-absolute{
+  position: absolute;
+}
+
+#TextBox-Title{
+  transform: translateX(-14rem);
+}
+
+#No-checkbox{
+  cursor: pointer;
+  transform: translateX(-5rem);
+}
+
+#Yes-checkbox{
+  cursor: pointer;
+  transform: translateX(7rem);
+}
+
+#Checkbox-Title{
+  transform: translateX(-1rem) 
+}
+
+#QuestionMark{
+  transform:translateY(-3rem)
+}
+
+#QuestionMark-Outline{
+  transform: translateX(-1.3rem) translateY(-2rem)
+}
+
+#QuestionMark-Decor{
+  transform: translateX(-5rem) translateY(2rem)
+}
+
+#QuestionMark-Background{
+  transform: translateX(15rem)
+}
+
+#GlassPieces-1{
+  transform: translateY(4rem) translateX(-16rem);
+}
+
+#GlassPieces-2{
+  transform: translateY(22rem) translateX(-5rem);
+}
+
+#GlassPieces-3{
+  transform: translateY(-1rem) translateX(24rem)
+}
+
+#Checkbox-Line-1{
+  transform: translateY(1rem) translateX(18rem)
+}
+
+#Checkbox-Line-2{
+  transform: translateY(-5rem) translateX(-4rem)
+}
+
+#Checkbox-Line-3{
+  transform: translateY(25rem) translateX(20rem)
+}
+
+#questionMark-container{
+  transform: translateX(-25rem);
+}
+
+#textbox-container{
+  transform-origin: center right;
+  transform: translateY(-2rem) translateX(11rem) rotate(-3deg);
+}
+
+#button-container{
+  transform-origin: right center;
+  transform: translateY(7rem) translateX(20rem) rotate(-1deg);
+}
+
+#checkbox-content{
+  transform: translateY(-4rem);
 }
