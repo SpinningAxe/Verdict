@@ -56,3 +56,175 @@
   justify-content: center;
   align-items: center;
 }
+
+// #card-row{
+//   width: 100vw;
+//   height: 5rem;
+
+//   flex-direction: row;
+//   justify-content: space-around;
+
+//   padding: 0 4rem;
+// }
+
+// .card{
+//   border: 1px solid black;
+//   border: 8px;
+
+//   width: 200px;
+//   height: 350px;
+
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .epNum{
+//   margin: 8px;
+//   color: white;
+
+//   position: absolute;
+// }
+// .poster{
+//   height: 100%;
+//   width: auto;
+// }
+
+// .poster-holder{
+//   box-shadow: 0 0 12px black;
+
+//   border-radius: 8px;
+//   width: 100%;
+//   height: 90%;
+//   background-color: gray;
+//   margin-bottom: 0.5rem;
+
+//   overflow: hidden;
+
+//   display: flex;
+//   justify-content: flex-start;
+//   align-items: flex-end;
+// }
+
+// .title{
+//   margin: 0;
+//   padding: 0;
+//   color: white;
+//   width: 100%;
+// }
+
+// .card:hover{
+//   .hidden-content{
+//     transition: width 0.2s ease-out 0.3s, height 0.2s ease-out 0.3s;
+
+//     width: 350px;
+//     height: 450px;
+//   }
+// }
+
+// .hidden-content{
+//   border-radius: 8px;
+//   background-color: rgb(69, 69, 69);
+
+//   flex-direction: column;
+
+//   position: absolute;
+//   z-index: 99;
+
+//   overflow: hidden;
+
+//   width: 0px;
+//   height: 0px;
+// }
+
+// .inner-poster-container{
+//   width: 350px;
+//   height: 135px;
+
+//   overflow: hidden;
+// }
+// .inner-poster{
+//   height: 100%;
+//   width: auto;
+// }
+// .context{
+//   height: 270px;
+//   width: 350px;
+//   background-color: gray;
+// }
+// .footer{
+//   height: 45px;
+//   width: 350px;
+//   background-color: rgb(57, 57, 57);
+// }
+
+*{
+  box-sizing: border-box;
+}
+
+*, body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+
+  border: solid 1px black ;
+  background-color: gray;
+  padding: 2rem;
+}
+
+.card-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: white;
+
+  min-height: 5rem;
+  width: 100%;
+  border: solid 1px black ;
+}
+
+.card {
+  height:500px;
+  width:400px;
+
+  border: solid 1px white ;
+}
+
+.poster-container{
+  width:100%;
+  height:90%;
+
+  border: solid 1px red ;
+
+  display: flex; 
+  align-items: flex-end;
+  justify-content: flex-start; 
+
+  overflow:hidden;
+}
+
+.poster{
+  height:100%;
+  width:auto;
+}
+
+.ten-phim {
+  width: 100%;
+  height: 10%;
+
+  display:flex;
+  align-items:center;
+}
+
+.so-tap{
+  position:absolute;
+  color: white;
+
+  margin:8px;
+}

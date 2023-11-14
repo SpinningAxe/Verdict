@@ -1,120 +1,120 @@
 $scale: 0.6;
 $appearDur: 1s;
 
-@keyframes circle-animation{
-  from{
+@keyframes circle-animation {
+  from {
     transform: scale(0) rotate(180deg) translateX(-2rem) translateY(-2rem);
   }
-  to{
+  to {
     transform: scale(1) rotate(0deg) translateX(-2rem) translateY(-2rem);
   }
 }
 
-.buttonHolder-circle-appear-animation{
+.buttonHolder-circle-appear-animation {
   animation-name: circle-animation;
-  animation-duration: $appearDur*2;
-  animation-timing-function: cubic-bezier(0,0,0,1);
+  animation-duration: $appearDur * 2;
+  animation-timing-function: cubic-bezier(0, 0, 0, 1);
   animation-delay: 0s;
   animation-fill-mode: both;
 }
 
-@keyframes line-animation{
-  from{
+@keyframes line-animation {
+  from {
     transform: scale(0) rotate(40deg) translateX(13rem) translateY(-12rem);
   }
-  to{
+  to {
     transform: scale(1) rotate(-10deg) translateX(3rem) translateY(-2rem);
   }
 }
 
-.buttonHolder-line-appear-animation{
+.buttonHolder-line-appear-animation {
   animation-name: line-animation;
-  animation-duration: $appearDur*2;
-  animation-timing-function: cubic-bezier(0,0,0,1);
+  animation-duration: $appearDur * 2;
+  animation-timing-function: cubic-bezier(0, 0, 0, 1);
   animation-delay: 0s;
   animation-fill-mode: both;
 }
 
-@keyframes glassPieces-animation{
-  from{
+@keyframes glassPieces-animation {
+  from {
     transform: scale(0.1) rotate(40deg);
   }
-  to{
+  to {
     transform: scale(0.8) rotate(10deg) translateX(-3rem);
   }
 }
 
-.buttonHolder-glassPieces-appear-animation{
+.buttonHolder-glassPieces-appear-animation {
   animation-name: glassPieces-animation;
-  animation-duration: $appearDur*3;
-  animation-timing-function: cubic-bezier(0,0,0,1);
+  animation-duration: $appearDur * 3;
+  animation-timing-function: cubic-bezier(0, 0, 0, 1);
   animation-delay: 0s;
   animation-fill-mode: both;
 }
 
-@keyframes voidPiece1-animation{
-  from{
+@keyframes voidPiece1-animation {
+  from {
     transform: scale(0.1) rotate(60deg) translateY(2rem);
   }
-  to{
+  to {
     transform: scale(1) rotate(0deg) translateY(2rem);
   }
 }
 
-.voidPiece-1-appear-animation{
+.voidPiece-1-appear-animation {
   animation-name: voidPiece1-animation;
-  animation-duration: $appearDur*2;
+  animation-duration: $appearDur * 2;
   animation-timing-function: cubic-bezier(0, 0, 0, 0.95);
   animation-delay: 0s;
   animation-fill-mode: both;
 }
 
-@keyframes voidPiece2-animation{
-  from{
+@keyframes voidPiece2-animation {
+  from {
     transform: scale(0.1) rotate(-60deg) translateY(7rem);
   }
-  to{
+  to {
     transform: scale(1) rotate(0deg) translateY(7rem);
   }
 }
 
-.voidPiece-2-appear-animation{
+.voidPiece-2-appear-animation {
   animation-name: voidPiece2-animation;
-  animation-duration: $appearDur*2.5;
+  animation-duration: $appearDur * 2.5;
   animation-timing-function: cubic-bezier(0, 0, 0, 0.95);
   animation-delay: 0s;
   animation-fill-mode: both;
 }
 
-@keyframes background-animation{
-  from{
+@keyframes background-animation {
+  from {
     opacity: 0;
     transform: scaleY(0.1) translateX(-2rem);
   }
-  to{
-    opacity: .99;
+  to {
+    opacity: 0.99;
     transform: scaleY(1) translateX(-2rem);
   }
 }
 
-.background-appear-animation{
+.background-appear-animation {
   animation-name: background-animation;
-  animation-duration: $appearDur*2.5;
+  animation-duration: $appearDur * 2.5;
   animation-timing-function: cubic-bezier(0, 0, 0, 0.95);
   animation-delay: 0s;
   animation-fill-mode: both;
 }
 
-@keyframes login-button-animation{
-  from{
+@keyframes login-button-animation {
+  from {
     transform: translateY(-4rem) translateX(18rem);
   }
-  to{
-    transform:translateY(-8rem) rotate(-3deg);
+  to {
+    transform: translateY(-8rem) rotate(-3deg);
   }
 }
 
-.login-button-appear-animation{
+.login-button-appear-animation {
   animation-name: login-button-animation;
   animation-duration: $appearDur;
   animation-timing-function: ease;
@@ -122,16 +122,15 @@ $appearDur: 1s;
   animation-fill-mode: both;
 }
 
-@keyframes sign-up-button-animation{
-  from{
+@keyframes sign-up-button-animation {
+  from {
     transform: translateX(18rem);
   }
-  to{
-
+  to {
   }
 }
 
-.sign-up-button-appear-animation{
+.sign-up-button-appear-animation {
   animation-name: sign-up-button-animation;
   animation-duration: $appearDur;
   animation-timing-function: ease;
@@ -139,16 +138,16 @@ $appearDur: 1s;
   animation-fill-mode: both;
 }
 
-@keyframes view-aa-button-animation{
-  from{
+@keyframes view-aa-button-animation {
+  from {
     transform: translateY(10rem) translateX(18rem);
   }
-  to{
-    transform:  translateY(8rem) rotate(3deg);
+  to {
+    transform: translateY(8rem) rotate(3deg);
   }
 }
 
-.view-aa-button-appear-animation{
+.view-aa-button-appear-animation {
   animation-name: view-aa-button-animation;
   animation-duration: $appearDur;
   animation-timing-function: ease;
@@ -156,17 +155,17 @@ $appearDur: 1s;
   animation-fill-mode: both;
 }
 
-@keyframes buttonContainer-animation{
-  from{
+@keyframes buttonContainer-animation {
+  from {
     transform-origin: right center;
     transform: scale(0) rotate(10deg) translateY(-3rem) translateX(8rem);
   }
-  to{
-    transform: scale(1) rotate(3deg)
+  to {
+    transform: scale(1) rotate(3deg);
   }
 }
 
-.buttonContainer-appear-animation{
+.buttonContainer-appear-animation {
   animation-name: buttonContainer-animation;
   animation-duration: $appearDur;
   animation-timing-function: ease;
@@ -181,12 +180,12 @@ $appearDur: 1s;
   width: 100vw;
 
   background-color: white;
-  box-shadow: 0px 0px 24px rgba(88, 255, 215, 0.40); 
+  box-shadow: 0px 0px 24px rgba(88, 255, 215, 0.4);
 
   transform: translateY(-6rem);
 }
 
-.center-center{
+.center-center {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -202,52 +201,52 @@ $appearDur: 1s;
   flex-direction: row;
 }
 
-#left-content{
+#left-content {
   width: 50%;
   height: 100%;
 }
 
-.blur-content{
+.blur-content {
   filter: blur(5px);
 }
 
 @keyframes remove-blur {
-  from{
+  from {
     filter: blur(5px);
   }
-  to{
+  to {
     filter: blur(0px);
-  }  
+  }
 }
 
-.remove-blur-content{
+.remove-blur-content {
   animation: remove-blur 1s ease;
   animation-fill-mode: both;
 }
 
-#right-content{
+#right-content {
   width: 50%;
-  height: 100%; 
+  height: 100%;
 
   overflow: hidden;
 
   transform: translateX(3rem) translateY(-2rem);
 }
 
-#button-container{
+#button-container {
   flex-direction: column;
   position: absolute;
   z-index: 89;
 }
 
-.button-title{
+.button-title {
   position: absolute;
   z-index: 999;
 
   cursor: pointer;
 }
 
-.button-placard{
+.button-placard {
   position: absolute;
   z-index: 90;
 
@@ -255,20 +254,20 @@ $appearDur: 1s;
   cursor: pointer;
 }
 
-#login-title{
+#login-title {
   transform: translateX(-1rem);
 }
 
-#sign-up-title{
+#sign-up-title {
   transform: translateX(-3rem);
 }
 
-#sign-up-title-hover{
+#sign-up-title-hover {
   transform: translateX(-3rem);
   filter: brightness(0.1);
 }
 
-#sign-up-button-hover{
+#sign-up-button-hover {
   position: absolute;
   z-index: 99;
 }
@@ -276,23 +275,23 @@ $appearDur: 1s;
 // #view-aa-title{
 // }
 
-#login-button{
+#login-button {
   scale: $scale;
   transform: translateY(-7rem);
 
-  transition: all 0.3s cubic-bezier(1,0,0,1);
+  transition: all 0.3s cubic-bezier(1, 0, 0, 1);
 }
 
-#sign-up-button{
+#sign-up-button {
   scale: $scale;
 }
 
-#view-aa-button{
+#view-aa-button {
   scale: $scale;
   transform: translateY(7rem);
 }
 
-#buttonHolder-circle{
+#buttonHolder-circle {
   position: absolute;
   z-index: 80;
   scale: $scale;
@@ -300,7 +299,7 @@ $appearDur: 1s;
   transform: translateX(-2rem) translateY(-2rem);
 }
 
-#buttonHolder-line{
+#buttonHolder-line {
   position: absolute;
   z-index: 80;
   transform: translateX(3rem) translateY(-2rem);
@@ -308,13 +307,13 @@ $appearDur: 1s;
   scale: $scale;
 }
 
-#buttonHolder-glassPieces{
+#buttonHolder-glassPieces {
   position: absolute;
   z-index: 81;
   scale: $scale;
 }
 
-#buttonHolder-background{
+#buttonHolder-background {
   position: absolute;
   z-index: 10;
   scale: $scale;
@@ -324,7 +323,7 @@ $appearDur: 1s;
   filter: blur(25px) brightness(50%);
 }
 
-#voidPiece-1{
+#voidPiece-1 {
   position: absolute;
   z-index: 71;
   scale: $scale;
@@ -332,7 +331,7 @@ $appearDur: 1s;
   transform: translateY(2rem);
 }
 
-#voidPiece-2{
+#voidPiece-2 {
   position: absolute;
   z-index: 70;
   scale: $scale;
@@ -341,112 +340,178 @@ $appearDur: 1s;
 }
 
 //CHECKBOX CSS____________________________________________________________________________________
-$checkboxScale:.5;
-#checkbox{
+$checkboxScale: 0.45;
+
+$animationDur-cb: 10s;
+
+$animationLayer1: 8rem;
+$animationLayer2: 5rem;
+$animationLayer3: 2rem;
+$animationLayer4: 1rem;
+
+#checkbox {
   width: 100%;
   height: 100%;
 
   position: absolute;
   z-index: 1;
-  
+
   overflow: hidden;
   display: none;
 }
 
-#blur-background{
+#blur-background {
   width: 100%;
   height: 100%;
   filter: blur(2rem);
 
   background-color: #3f3636;
-  opacity: .7;
+  opacity: 0.7;
 
   position: absolute;
   z-index: 90;
 }
 
-#checkbox-content{
+#checkbox-content {
   position: absolute;
   z-index: 99;
   scale: $checkboxScale;
 }
 
-.pos-absolute{
+.pos-absolute {
   position: absolute;
 }
 
-#TextBox-Title{
-  transform: translateX(-14rem);
+@keyframes textbox-container-appear {
+  from{
+    transform: translateX(-40rem) translateY(2rem);
+    scale: 0.5;
+    opacity: 0;
+  }
+  to{
+    transform: translateX(11rem) translateY(-2rem) rotate(-3deg);
+  }
 }
 
-#No-checkbox{
-  cursor: pointer;
-  transform: translateX(-5rem);
+.textbox-appear-animation{
+  animation: textbox-container-appear 0.5s cubic-bezier(1, 0, 0, 1);
+  animation-fill-mode: both;
 }
 
-#Yes-checkbox{
-  cursor: pointer;
-  transform: translateX(7rem);
-}
-
-#Checkbox-Title{
-  transform: translateX(-1rem) 
-}
-
-#QuestionMark{
-  transform:translateY(-3rem)
-}
-
-#QuestionMark-Outline{
-  transform: translateX(-1.3rem) translateY(-2rem)
-}
-
-#QuestionMark-Decor{
-  transform: translateX(-5rem) translateY(2rem)
-}
-
-#QuestionMark-Background{
-  transform: translateX(15rem)
-}
-
-#GlassPieces-1{
-  transform: translateY(4rem) translateX(-16rem);
-}
-
-#GlassPieces-2{
-  transform: translateY(22rem) translateX(-5rem);
-}
-
-#GlassPieces-3{
-  transform: translateY(-1rem) translateX(24rem)
-}
-
-#Checkbox-Line-1{
-  transform: translateY(1rem) translateX(18rem)
-}
-
-#Checkbox-Line-2{
-  transform: translateY(-5rem) translateX(-4rem)
-}
-
-#Checkbox-Line-3{
-  transform: translateY(25rem) translateX(20rem)
-}
-
-#questionMark-container{
-  transform: translateX(-25rem);
-}
-
-#textbox-container{
+#textbox-container {
   transform-origin: center right;
   transform: translateY(-2rem) translateX(11rem) rotate(-3deg);
 }
 
-#button-container{
+#TextBox-Title {
+  transform: translateX(-13rem);
+}
+
+// #TextBox-Outline{
+
+// }
+
+// #Textbox{
+
+// }
+
+#No-checkbox {
+  cursor: pointer;
+  transform: translateX(-5rem);
+}
+
+#Yes-checkbox {
+  cursor: pointer;
+  transform: translateX(7rem);
+}
+
+#Checkbox-Title {
+  transform: translateX(-1rem);
+}
+
+#QuestionMark {
+  transform: translateY(-3rem);
+}
+
+#QuestionMark-Outline {
+  transform: translateX(-1.3rem) translateY(-.5rem);
+  opacity: 0.6;
+}
+
+#QuestionMark-Decor {
+  transform: translateX(-5rem) translateY(2rem);
+
+}
+
+#QuestionMark-Background {
+  transform: translateX(15rem);
+
+}
+
+@keyframes questionMark-container-appear {
+  0%{
+    scale: 0;
+  }
+  10%,20%{
+    scale: 1.6;
+  }
+  100%{
+    scale: 1;
+  }
+}
+
+.questionMark-appear-animation{
+  animation: questionMark-container-appear 1s cubic-bezier(0, 0, 0, 1) 0.4s;
+  animation-fill-mode: both;
+}
+
+#questionMark-container {
+  transform: translateX(-22rem);
+  scale: 1.2;
+}
+
+#GlassPieces-1 {
+  transform: translateY(4rem) translateX(-16rem);
+}
+
+#GlassPieces-2 {
+  transform: translateY(22rem) translateX(-5rem);
+}
+
+#GlassPieces-3 {
+  transform: translateY(-1rem) translateX(24rem);
+}
+
+#Checkbox-Line-1 {
+  transform: translateY(1rem) translateX(18rem);
+}
+
+#Checkbox-Line-2 {
+  transform: translateY(-5rem) translateX(-4rem);
+}
+
+#Checkbox-Line-3 {
+  transform: translateY(25rem) translateX(20rem);
+}
+
+
+
+
+
+#button-container-checkbox {
   transform-origin: right center;
   transform: translateY(7rem) translateX(20rem) rotate(-1deg);
 }
 
-#checkbox-content{
+#checkbox-content {
   transform: translateY(-4rem);
+}
+
+@keyframes fly-in {
+  from{
+    transform: translateX(20rem ) translateY(-20rem);
+  }
+  to{
+    transform: translateY(-4rem);
+  }
 }

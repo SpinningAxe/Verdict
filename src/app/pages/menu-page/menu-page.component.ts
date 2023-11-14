@@ -51,7 +51,7 @@ export class MenuPageComponent {
 
   navigateToVerdict(){
     setTimeout(() =>{
-      // this.Router.navigate(['verdict'])
+      this.Router.navigate(['verdict'])
     }, 200) 
 
   }
