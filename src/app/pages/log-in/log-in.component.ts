@@ -9,6 +9,8 @@ export class LogInComponent {
   constructor(private Router: Router) { }
 
   navigateTo(path:string){
-    this.Router.navigate([path])
+    setTimeout(() =>{
+      this.Router.navigate([path])
+    }, 200) 
   }
 }
