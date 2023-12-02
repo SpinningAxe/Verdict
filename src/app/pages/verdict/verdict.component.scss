@@ -1,230 +1,230 @@
-@keyframes manifest-destiny {
-    0%{
-        transform: translateY(-6rem); 
-    }
-    100%{
-        height: 80vh;
-        transform:  translateY(0);
-        box-shadow: none;
-        background-color: rgb(246, 255, 253)
-    }
-}
-
-.manifest-destiny{
-    animation-name: manifest-destiny;
-    animation-duration: 1s;
-    animation-timing-function: cubic-bezier(1, 0, 0, 1);
-    animation-fill-mode: both;
-}
-
-#container {
-  width: 100vw;
-  height: 100vh;
-  background-color: #08080f;
-}
-
-.button {
-  background-color: white;
-  color: black;
-
-  width: 20rem;
-  height: 3rem;
-  margin: 1rem;
-
-  border-radius: 8px;
-
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  cursor: pointer;
-}
-
-#horizonLine {
-  position: absolute;
-
-  height: 4px;
-  width: 100vw;
-
-  background-color: white;
-  box-shadow: 0px 0px 50px rgba(88, 255, 215, 0.40);  
-}
-
-.center-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-// #card-row{
-//   width: 100vw;
-//   height: 5rem;
-
-//   flex-direction: row;
-//   justify-content: space-around;
-
-//   padding: 0 4rem;
+// @keyframes manifest-destiny {
+//     0%{
+//         transform: translateY(-6rem); 
+//     }
+//     100%{
+//         height: 80vh;
+//         transform:  translateY(0);
+//         box-shadow: none;
+//         background-color: rgb(246, 255, 253)
+//     }
 // }
 
-// .card{
-//   border: 1px solid black;
-//   border: 8px;
+// .manifest-destiny{
+//     animation-name: manifest-destiny;
+//     animation-duration: 1s;
+//     animation-timing-function: cubic-bezier(1, 0, 0, 1);
+//     animation-fill-mode: both;
+// }
 
-//   width: 200px;
-//   height: 350px;
+// #container {
+//   width: 100vw;
+//   height: 100vh;
+//   background-color: #08080f;
+// }
 
+// .button {
+//   background-color: white;
+//   color: black;
+
+//   width: 20rem;
+//   height: 3rem;
+//   margin: 1rem;
+
+//   border-radius: 8px;
+
+//   text-align: center;
 //   display: flex;
-//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+
+//   cursor: pointer;
+// }
+
+// #horizonLine {
+//   position: absolute;
+
+//   height: 4px;
+//   width: 100vw;
+
+//   background-color: white;
+//   box-shadow: 0px 0px 50px rgba(88, 255, 215, 0.40);  
+// }
+
+// .center-center {
+//   display: flex;
 //   justify-content: center;
 //   align-items: center;
 // }
 
-// .epNum{
-//   margin: 8px;
-//   color: white;
+// // #card-row{
+// //   width: 100vw;
+// //   height: 5rem;
 
-//   position: absolute;
+// //   flex-direction: row;
+// //   justify-content: space-around;
+
+// //   padding: 0 4rem;
+// // }
+
+// // .card{
+// //   border: 1px solid black;
+// //   border: 8px;
+
+// //   width: 200px;
+// //   height: 350px;
+
+// //   display: flex;
+// //   flex-direction: column;
+// //   justify-content: center;
+// //   align-items: center;
+// // }
+
+// // .epNum{
+// //   margin: 8px;
+// //   color: white;
+
+// //   position: absolute;
+// // }
+// // .poster{
+// //   height: 100%;
+// //   width: auto;
+// // }
+
+// // .poster-holder{
+// //   box-shadow: 0 0 12px black;
+
+// //   border-radius: 8px;
+// //   width: 100%;
+// //   height: 90%;
+// //   background-color: gray;
+// //   margin-bottom: 0.5rem;
+
+// //   overflow: hidden;
+
+// //   display: flex;
+// //   justify-content: flex-start;
+// //   align-items: flex-end;
+// // }
+
+// // .title{
+// //   margin: 0;
+// //   padding: 0;
+// //   color: white;
+// //   width: 100%;
+// // }
+
+// // .card:hover{
+// //   .hidden-content{
+// //     transition: width 0.2s ease-out 0.3s, height 0.2s ease-out 0.3s;
+
+// //     width: 350px;
+// //     height: 450px;
+// //   }
+// // }
+
+// // .hidden-content{
+// //   border-radius: 8px;
+// //   background-color: rgb(69, 69, 69);
+
+// //   flex-direction: column;
+
+// //   position: absolute;
+// //   z-index: 99;
+
+// //   overflow: hidden;
+
+// //   width: 0px;
+// //   height: 0px;
+// // }
+
+// // .inner-poster-container{
+// //   width: 350px;
+// //   height: 135px;
+
+// //   overflow: hidden;
+// // }
+// // .inner-poster{
+// //   height: 100%;
+// //   width: auto;
+// // }
+// // .context{
+// //   height: 270px;
+// //   width: 350px;
+// //   background-color: gray;
+// // }
+// // .footer{
+// //   height: 45px;
+// //   width: 350px;
+// //   background-color: rgb(57, 57, 57);
+// // }
+
+// *{
+//   box-sizing: border-box;
 // }
-// .poster{
-//   height: 100%;
-//   width: auto;
+
+// *, body {
+//   margin: 0px;
+//   padding: 0px;
 // }
 
-// .poster-holder{
-//   box-shadow: 0 0 12px black;
+// .App {
+//   width: 100vw;
+//   height: 100vh;
 
-//   border-radius: 8px;
-//   width: 100%;
-//   height: 90%;
+//   border: solid 1px black ;
 //   background-color: gray;
-//   margin-bottom: 0.5rem;
+//   padding: 2rem;
+// }
 
-//   overflow: hidden;
-
+// .card-row {
 //   display: flex;
-//   justify-content: flex-start;
-//   align-items: flex-end;
-// }
+//   align-items: center;
+//   justify-content: space-between;
 
-// .title{
-//   margin: 0;
-//   padding: 0;
 //   color: white;
+
+//   min-height: 5rem;
 //   width: 100%;
+//   border: solid 1px black ;
 // }
 
-// .card:hover{
-//   .hidden-content{
-//     transition: width 0.2s ease-out 0.3s, height 0.2s ease-out 0.3s;
+// .card {
+//   height:500px;
+//   width:400px;
 
-//     width: 350px;
-//     height: 450px;
-//   }
+//   border: solid 1px white ;
 // }
 
-// .hidden-content{
-//   border-radius: 8px;
-//   background-color: rgb(69, 69, 69);
+// .poster-container{
+//   width:100%;
+//   height:90%;
 
-//   flex-direction: column;
+//   border: solid 1px red ;
 
-//   position: absolute;
-//   z-index: 99;
+//   display: flex; 
+//   align-items: flex-end;
+//   justify-content: flex-start; 
 
-//   overflow: hidden;
-
-//   width: 0px;
-//   height: 0px;
+//   overflow:hidden;
 // }
 
-// .inner-poster-container{
-//   width: 350px;
-//   height: 135px;
-
-//   overflow: hidden;
-// }
-// .inner-poster{
-//   height: 100%;
-//   width: auto;
-// }
-// .context{
-//   height: 270px;
-//   width: 350px;
-//   background-color: gray;
-// }
-// .footer{
-//   height: 45px;
-//   width: 350px;
-//   background-color: rgb(57, 57, 57);
+// .poster{
+//   height:100%;
+//   width:auto;
 // }
 
-*{
-  box-sizing: border-box;
-}
+// .ten-phim {
+//   width: 100%;
+//   height: 10%;
 
-*, body {
-  margin: 0px;
-  padding: 0px;
-}
+//   display:flex;
+//   align-items:center;
+// }
 
-.App {
-  width: 100vw;
-  height: 100vh;
+// .so-tap{
+//   position:absolute;
+//   color: white;
 
-  border: solid 1px black ;
-  background-color: gray;
-  padding: 2rem;
-}
-
-.card-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  color: white;
-
-  min-height: 5rem;
-  width: 100%;
-  border: solid 1px black ;
-}
-
-.card {
-  height:500px;
-  width:400px;
-
-  border: solid 1px white ;
-}
-
-.poster-container{
-  width:100%;
-  height:90%;
-
-  border: solid 1px red ;
-
-  display: flex; 
-  align-items: flex-end;
-  justify-content: flex-start; 
-
-  overflow:hidden;
-}
-
-.poster{
-  height:100%;
-  width:auto;
-}
-
-.ten-phim {
-  width: 100%;
-  height: 10%;
-
-  display:flex;
-  align-items:center;
-}
-
-.so-tap{
-  position:absolute;
-  color: white;
-
-  margin:8px;
-}
+//   margin:8px;
+// }

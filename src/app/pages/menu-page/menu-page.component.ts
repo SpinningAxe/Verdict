@@ -6,55 +6,63 @@ import { Router } from '@angular/router';
   styleUrls: ['./menu-page.component.scss']
 })
 export class MenuPageComponent { 
-  constructor(private Router: Router) { }
+  constructor(private route: Router) { }
+  
+  title="menu-page";
 
-  navigateToLogin(){
-    setTimeout(() =>{
-      this.Router.navigate(['log-in'])
-    }, 200) 
-    
-  }
+  async navigateTo(pageDes:string){
 
-  navigateToSignUp(){
     setTimeout(() =>{
-      this.Router.navigate(['sign-up'])
+      this.route.navigate([pageDes])
     }, 200) 
   }
-
-  openModal(){
-    let modal = document.getElementById('checkbox');
-    let right_conttent = document.getElementById('right-content');
-    let horizonLine = document.getElementById('horizonLine');
+  // navigateToLogin(){
+  //   setTimeout(() =>{
+  //     this.Router.navigate(['log-in'])
+  //   }, 200) 
     
-    right_conttent!.classList.remove("remove-blur-content")
-    right_conttent!.classList.add("blur-content")
+  // }
+
+  // navigateToSignUp(){
+  //   setTimeout(() =>{
+  //     this.Router.navigate(['sign-up'])
+  //   }, 200) 
+  // }
+
+  // openModal(){
+  //   let modal = document.getElementById('checkbox');
+  //   let right_conttent = document.getElementById('right-content');
+  //   let horizonLine = document.getElementById('horizonLine');
     
-    horizonLine!.classList.remove("remove-blur-content")
-    horizonLine!.classList.add("blur-content")
-
-    modal!.style.display = 'flex';
-  }
-
-  closeModal(){
-    let modal = document.getElementById('checkbox');
-    let right_conttent = document.getElementById('right-content');
-    let horizonLine = document.getElementById('horizonLine');
-
-    right_conttent!.classList.remove("blur-content")
-    right_conttent!.classList.add("remove-blur-content")
-
-    horizonLine!.classList.remove("blur-content")
-    horizonLine!.classList.add("remove-blur-content")
+  //   right_conttent!.classList.remove("remove-blur-content")
+  //   right_conttent!.classList.add("blur-content")
     
-    modal!.style.display = 'none';
-  }
+  //   horizonLine!.classList.remove("remove-blur-content")
+  //   horizonLine!.classList.add("blur-content")
 
-  navigateToVerdict(){
-    setTimeout(() =>{
-      this.Router.navigate(['verdict'])
-    }, 200) 
+  //   modal!.style.display = 'flex';
+  // }
 
-  }
+  // closeModal(){
+  //   let modal = document.getElementById('checkbox');
+  //   let right_conttent = document.getElementById('right-content');
+  //   let horizonLine = document.getElementById('horizonLine');
+
+  //   right_conttent!.classList.remove("blur-content")
+  //   right_conttent!.classList.add("remove-blur-content")
+
+  //   horizonLine!.classList.remove("blur-content")
+  //   horizonLine!.classList.add("remove-blur-content")
+    
+  //   modal!.style.display = 'none';
+  // }
+
+  // navigateToVerdict(){
+  //   setTimeout(() =>{
+  //     this.Router.navigate(['verdict'])
+  //   }, 200) 
+
+  // }
 
   // hoverEffect(button:string){
   //   let buttonHover = document.getElementById(`${button}`);

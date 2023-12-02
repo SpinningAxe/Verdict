@@ -1,717 +1,827 @@
-$scale: 0.6;
-$appearDur: 1s;
+$color-70: #2F2C31;
+$color-20: #171212;
+$color-20-2: #190F10;
+$color-10: #D7E7E2;
 
-@keyframes circle-animation {
-  from {
-    transform: scale(0) rotate(180deg) translateX(-2rem) translateY(-2rem);
+#menuPageContainer{
+    width: 100vw;
+    height: 100vh;
+  
+    flex-direction: column;
   }
-  to {
-    transform: scale(1) rotate(0deg) translateX(-2rem) translateY(-2rem);
-  }
+
+.center-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.buttonHolder-circle-appear-animation {
-  animation-name: circle-animation;
-  animation-duration: $appearDur * 2;
-  animation-timing-function: cubic-bezier(0, 0, 0, 1);
-  animation-delay: 0s;
-  animation-fill-mode: both;
+#buttonBox{
+    position: absolute;
+    right: 1px;
+
+    margin-right: 2rem;
+
+    flex-direction: column;
+    width: 499px;
+    height: 750px;
+    background: radial-gradient(220.92% 49.94% at 50.08% 50.06%, #06050A 0%, #190F10 49.89%, rgba(6, 5, 10, 0.00) 99.05%);
 }
 
-@keyframes line-animation {
-  from {
-    transform: scale(0) rotate(40deg) translateX(13rem) translateY(-12rem);
-  }
-  to {
-    transform: scale(1) rotate(-10deg) translateX(3rem) translateY(-2rem);
-  }
+.button{
+    color: $color-10;
+
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.44px;
+
+    width: 364px;
+    height: 63px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: $color-20;
+
+    margin: 8px 0;
+
+    transform-origin: left center;
 }
 
-.buttonHolder-line-appear-animation {
-  animation-name: line-animation;
-  animation-duration: $appearDur * 2;
-  animation-timing-function: cubic-bezier(0, 0, 0, 1);
-  animation-delay: 0s;
-  animation-fill-mode: both;
-}
-
-@keyframes glassPieces-animation {
-  from {
-    transform: scale(0.1) rotate(40deg);
-  }
-  to {
-    transform: scale(0.8) rotate(10deg) translateX(-3rem);
-  }
-}
-
-.buttonHolder-glassPieces-appear-animation {
-  animation-name: glassPieces-animation;
-  animation-duration: $appearDur * 3;
-  animation-timing-function: cubic-bezier(0, 0, 0, 1);
-  animation-delay: 0s;
-  animation-fill-mode: both;
-}
-
-@keyframes voidPiece1-animation {
-  from {
-    transform: scale(0.1) rotate(60deg) translateY(2rem);
-  }
-  to {
-    transform: scale(1) rotate(0deg) translateY(2rem);
-  }
-}
-
-.voidPiece-1-appear-animation {
-  animation-name: voidPiece1-animation;
-  animation-duration: $appearDur * 2;
-  animation-timing-function: cubic-bezier(0, 0, 0, 0.95);
-  animation-delay: 0s;
-  animation-fill-mode: both;
-}
-
-@keyframes voidPiece2-animation {
-  from {
-    transform: scale(0.1) rotate(-60deg) translateY(7rem);
-  }
-  to {
-    transform: scale(1) rotate(0deg) translateY(7rem);
-  }
-}
-
-.voidPiece-2-appear-animation {
-  animation-name: voidPiece2-animation;
-  animation-duration: $appearDur * 2.5;
-  animation-timing-function: cubic-bezier(0, 0, 0, 0.95);
-  animation-delay: 0s;
-  animation-fill-mode: both;
-}
-
-@keyframes background-animation {
-  from {
-    opacity: 0;
-    transform: scaleY(0.1) translateX(-2rem);
-  }
-  to {
-    opacity: 0.99;
-    transform: scaleY(1) translateX(-2rem);
-  }
-}
-
-.background-appear-animation {
-  animation-name: background-animation;
-  animation-duration: $appearDur * 2.5;
-  animation-timing-function: cubic-bezier(0, 0, 0, 0.95);
-  animation-delay: 0s;
-  animation-fill-mode: both;
-}
-
-@keyframes login-button-animation {
-  from {
-    transform: translateY(-4rem) translateX(18rem);
-  }
-  to {
-    transform: translateY(-8rem) rotate(-3deg);
-  }
-}
-
-.login-button-appear-animation {
-  animation-name: login-button-animation;
-  animation-duration: $appearDur;
-  animation-timing-function: ease;
-  animation-delay: 0s;
-  animation-fill-mode: both;
-}
-
-@keyframes sign-up-button-animation {
-  from {
-    transform: translateX(18rem);
-  }
-  to {
-  }
-}
-
-.sign-up-button-appear-animation {
-  animation-name: sign-up-button-animation;
-  animation-duration: $appearDur;
-  animation-timing-function: ease;
-  animation-delay: 0.2s;
-  animation-fill-mode: both;
-}
-
-@keyframes view-aa-button-animation {
-  from {
-    transform: translateY(10rem) translateX(18rem);
-  }
-  to {
-    transform: translateY(8rem) rotate(3deg);
-  }
-}
-
-.view-aa-button-appear-animation {
-  animation-name: view-aa-button-animation;
-  animation-duration: $appearDur;
-  animation-timing-function: ease;
-  animation-delay: 0.4s;
-  animation-fill-mode: both;
-}
-
-@keyframes buttonContainer-animation {
-  from {
-    transform-origin: right center;
-    transform: scale(0) rotate(10deg) translateY(-3rem) translateX(8rem);
-  }
-  to {
-    transform: scale(1) rotate(3deg);
-  }
-}
-
-.buttonContainer-appear-animation {
-  animation-name: buttonContainer-animation;
-  animation-duration: $appearDur;
-  animation-timing-function: ease;
-  animation-delay: 0;
-  animation-fill-mode: both;
-}
-
-#horizonLine {
-  position: absolute;
-  z-index: 0;
-  height: 4px;
-  width: 100vw;
-
-  background-color: white;
-  box-shadow: 0px 0px 24px rgba(88, 255, 215, 0.4);
-
-  transform: translateY(-6rem);
-}
-
-.center-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#container {
-  width: 100vw;
-  height: 100vh;
-  background-color: #08080f;
-
-  overflow: hidden;
-
-  flex-direction: row;
-}
-
-#left-content {
-  width: 50%;
-  height: 100%;
-}
-
-.blur-content {
-  filter: blur(5px);
-}
-
-@keyframes remove-blur {
-  from {
-    filter: blur(5px);
-  }
-  to {
-    filter: blur(0px);
-  }
-}
-
-.remove-blur-content {
-  animation: remove-blur 1s ease;
-  animation-fill-mode: both;
-}
-
-#right-content {
-  width: 50%;
-  height: 100%;
-
-  overflow: hidden;
-
-  transform: translateX(3rem) translateY(-2rem);
-}
-
-#button-container {
-  flex-direction: column;
-  position: absolute;
-  z-index: 89;
-}
-
-.button-title {
-  position: absolute;
-  z-index: 999;
-
-  cursor: pointer;
-}
-
-.button-placard {
-  position: absolute;
-  z-index: 90;
-
-  filter: blur(1px);
-  cursor: pointer;
-}
-
-#login-title {
-  transform: translateX(-1rem);
-}
-
-#sign-up-title {
-  transform: translateX(-3rem);
-}
-
-#sign-up-title-hover {
-  transform: translateX(-3rem);
-  filter: brightness(0.1);
-}
-
-#sign-up-button-hover {
-  position: absolute;
-  z-index: 99;
-}
-
-// #view-aa-title{
+// #login-button{
+//     animation-delay: 0.1s;
 // }
 
-#login-button {
-  scale: $scale;
-  transform: translateY(-7rem);
-
-  transition: all 0.3s cubic-bezier(1, 0, 0, 1);
-}
-
-#sign-up-button {
-  scale: $scale;
-}
-
-#view-aa-button {
-  scale: $scale;
-  transform: translateY(7rem);
-}
-
-#buttonHolder-circle {
-  position: absolute;
-  z-index: 80;
-  scale: $scale;
-
-  transform: translateX(-2rem) translateY(-2rem);
-}
-
-#buttonHolder-line {
-  position: absolute;
-  z-index: 80;
-  transform: translateX(3rem) translateY(-2rem);
-
-  scale: $scale;
-}
-
-#buttonHolder-glassPieces {
-  position: absolute;
-  z-index: 81;
-  scale: $scale;
-}
-
-#buttonHolder-background {
-  position: absolute;
-  z-index: 10;
-  scale: $scale;
-
-  opacity: 0.95;
-  transform: translateX(-2rem);
-  filter: blur(25px) brightness(50%);
-}
-
-#voidPiece-1 {
-  position: absolute;
-  z-index: 71;
-  scale: $scale;
-
-  transform: translateY(2rem);
-}
-
-#voidPiece-2 {
-  position: absolute;
-  z-index: 70;
-  scale: $scale;
-
-  transform: translateY(7rem);
-}
-
-//CHECKBOX CSS____________________________________________________________________________________
-$checkboxScale: 0.45;
-
-$animationDur-cb: 10s;
-
-$animationLayer1: 8rem;
-$animationLayer2: 5rem;
-$animationLayer3: 2rem;
-$animationLayer4: 1rem;
-
-#checkbox {
-  width: 100%;
-  height: 100%;
-
-  position: absolute;
-  z-index: 1;
-
-  overflow: hidden;
-  display: none;
-}
-
-#blur-background {
-  width: 100%;
-  height: 100%;
-  filter: blur(2rem);
-
-  background-color: #3f3636;
-  opacity: 0.7;
-
-  position: absolute;
-  z-index: 90;
-}
-
-#checkbox-content {
-  position: absolute;
-  z-index: 99;
-  scale: $checkboxScale;
-}
-
-.pos-absolute {
-  position: absolute;
-}
-
-@keyframes textbox-container-appear {
-  from{
-    transform: translateX(-40rem) translateY(2rem);
-    scale: 0.5;
-    opacity: 0;
-  }
-  to{
-    transform: translateX(11rem) translateY(-2rem) rotate(-3deg);
-  }
-}
-
-.textbox-appear-animation{
-  animation: textbox-container-appear 0.5s cubic-bezier(1, 0, 0, 1);
-  animation-fill-mode: both;
-}
-
-#textbox-container {
-  transform-origin: center right;
-  transform: translateY(-2rem) translateX(11rem) rotate(-3deg);
-}
-
-#TextBox-Title {
-  transform: translateX(-13rem);
-}
-
-// #TextBox-Outline{
-
+// #register-button{
+//     animation-delay: 0.2s;
 // }
 
-// #Textbox{
+// #anonView-button{
+//     animation-delay: 0.3s;
+// }
 
+// #about-button{
+//     animation-delay: 0.4s;
+// }
+#button-Box{
+    flex-direction: column;
+}
+
+// KEYFRAMES ----------------------------------------------------------------------------------------------------
+
+@keyframes button-appear {
+    from{
+        // rotate: -5deg;
+        // transform: scaleX(0) translateX(2rem) translateY(-2rem);
+    }
+}
+
+@keyframes button-Box-appear {
+    from{
+        transform: rotate (-10deg);
+        // transform: skewX(0.2) translateX(8rem) translateY(-4rem);
+    }
+    to{
+        transform:rotate (-1deg);
+    }
+}
+
+// ANIMATION CLASS ----------------------------------------------------------------------------------------------
+
+.animate-fillmode-both{
+    animation-fill-mode: both;
+}
+
+.button-appear{
+    animation: button-appear 1s cubic-bezier(0,0,0,1);
+    animation-fill-mode: both;
+}
+
+.button-Box-appear{
+    animation: button-Box-appear 1s cubic-bezier(0,0,0,1);
+    animation-fill-mode: both;
+}
+// .buttonBox-appear{
+//     animation: buttonBox-appear 0.3s cubic-bezier(1,0,0,1);
 // }
 
 
+// $scale: 0.6;
+// $appearDur: 1s;
 
-#Checkbox-Title {
-  transform: translateX(-1rem);
-}
+// @keyframes circle-animation {
+//   from {
+//     transform: scale(0) rotate(180deg) translateX(-2rem) translateY(-2rem);
+//   }
+//   to {
+//     transform: scale(1) rotate(0deg) translateX(-2rem) translateY(-2rem);
+//   }
+// }
 
-#QuestionMark {
-  transform: translateY(-3rem);
-}
+// .buttonHolder-circle-appear-animation {
+//   animation-name: circle-animation;
+//   animation-duration: $appearDur * 2;
+//   animation-timing-function: cubic-bezier(0, 0, 0, 1);
+//   animation-delay: 0s;
+//   animation-fill-mode: both;
+// }
 
-#QuestionMark-Outline {
-  transform: translateX(-1.3rem) translateY(-.5rem);
-  opacity: 0.6;
-}
+// @keyframes line-animation {
+//   from {
+//     transform: scale(0) rotate(40deg) translateX(13rem) translateY(-12rem);
+//   }
+//   to {
+//     transform: scale(1) rotate(-10deg) translateX(3rem) translateY(-2rem);
+//   }
+// }
 
-#QuestionMark-Decor {
-  transform: translateX(-5rem) translateY(2rem);
+// .buttonHolder-line-appear-animation {
+//   animation-name: line-animation;
+//   animation-duration: $appearDur * 2;
+//   animation-timing-function: cubic-bezier(0, 0, 0, 1);
+//   animation-delay: 0s;
+//   animation-fill-mode: both;
+// }
 
-}
+// @keyframes glassPieces-animation {
+//   from {
+//     transform: scale(0.1) rotate(40deg);
+//   }
+//   to {
+//     transform: scale(0.8) rotate(10deg) translateX(-3rem);
+//   }
+// }
 
-@keyframes questionMark-radiant-appear {
-  0%{
-    scale: 0;
-    opacity: 0;
-    filter: blur(50px);
-  }
-  100%{
-    scale: 1;
-    opacity: 1;
+// .buttonHolder-glassPieces-appear-animation {
+//   animation-name: glassPieces-animation;
+//   animation-duration: $appearDur * 3;
+//   animation-timing-function: cubic-bezier(0, 0, 0, 1);
+//   animation-delay: 0s;
+//   animation-fill-mode: both;
+// }
+
+// @keyframes voidPiece1-animation {
+//   from {
+//     transform: scale(0.1) rotate(60deg) translateY(2rem);
+//   }
+//   to {
+//     transform: scale(1) rotate(0deg) translateY(2rem);
+//   }
+// }
+
+// .voidPiece-1-appear-animation {
+//   animation-name: voidPiece1-animation;
+//   animation-duration: $appearDur * 2;
+//   animation-timing-function: cubic-bezier(0, 0, 0, 0.95);
+//   animation-delay: 0s;
+//   animation-fill-mode: both;
+// }
+
+// @keyframes voidPiece2-animation {
+//   from {
+//     transform: scale(0.1) rotate(-60deg) translateY(7rem);
+//   }
+//   to {
+//     transform: scale(1) rotate(0deg) translateY(7rem);
+//   }
+// }
+
+// .voidPiece-2-appear-animation {
+//   animation-name: voidPiece2-animation;
+//   animation-duration: $appearDur * 2.5;
+//   animation-timing-function: cubic-bezier(0, 0, 0, 0.95);
+//   animation-delay: 0s;
+//   animation-fill-mode: both;
+// }
+
+// @keyframes background-animation {
+//   from {
+//     opacity: 0;
+//     transform: scaleY(0.1) translateX(-2rem);
+//   }
+//   to {
+//     opacity: 0.99;
+//     transform: scaleY(1) translateX(-2rem);
+//   }
+// }
+
+// .background-appear-animation {
+//   animation-name: background-animation;
+//   animation-duration: $appearDur * 2.5;
+//   animation-timing-function: cubic-bezier(0, 0, 0, 0.95);
+//   animation-delay: 0s;
+//   animation-fill-mode: both;
+// }
+
+// @keyframes login-button-animation {
+//   from {
+//     transform: translateY(-4rem) translateX(18rem);
+//   }
+//   to {
+//     transform: translateY(-8rem) rotate(-3deg);
+//   }
+// }
+
+// .login-button-appear-animation {
+//   animation-name: login-button-animation;
+//   animation-duration: $appearDur;
+//   animation-timing-function: ease;
+//   animation-delay: 0s;
+//   animation-fill-mode: both;
+// }
+
+// @keyframes sign-up-button-animation {
+//   from {
+//     transform: translateX(18rem);
+//   }
+//   to {
+//   }
+// }
+
+// .sign-up-button-appear-animation {
+//   animation-name: sign-up-button-animation;
+//   animation-duration: $appearDur;
+//   animation-timing-function: ease;
+//   animation-delay: 0.2s;
+//   animation-fill-mode: both;
+// }
+
+// @keyframes view-aa-button-animation {
+//   from {
+//     transform: translateY(10rem) translateX(18rem);
+//   }
+//   to {
+//     transform: translateY(8rem) rotate(3deg);
+//   }
+// }
+
+// .view-aa-button-appear-animation {
+//   animation-name: view-aa-button-animation;
+//   animation-duration: $appearDur;
+//   animation-timing-function: ease;
+//   animation-delay: 0.4s;
+//   animation-fill-mode: both;
+// }
+
+// @keyframes buttonContainer-animation {
+//   from {
+//     transform-origin: right center;
+//     transform: scale(0) rotate(10deg) translateY(-3rem) translateX(8rem);
+//   }
+//   to {
+//     transform: scale(1) rotate(3deg);
+//   }
+// }
+
+// .buttonContainer-appear-animation {
+//   animation-name: buttonContainer-animation;
+//   animation-duration: $appearDur;
+//   animation-timing-function: ease;
+//   animation-delay: 0;
+//   animation-fill-mode: both;
+// }
+
+// #horizonLine {
+//   position: absolute;
+//   z-index: 0;
+//   height: 4px;
+//   width: 100vw;
+
+//   background-color: white;
+//   box-shadow: 0px 0px 24px rgba(88, 255, 215, 0.4);
+
+//   transform: translateY(-6rem);
+// }
+
+// .center-center {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+// #container {
+//   width: 100vw;
+//   height: 100vh;
+//   background-color: #08080f;
+
+//   overflow: hidden;
+
+//   flex-direction: row;
+// }
+
+// #left-content {
+//   width: 50%;
+//   height: 100%;
+// }
+
+// .blur-content {
+//   filter: blur(5px);
+// }
+
+// @keyframes remove-blur {
+//   from {
+//     filter: blur(5px);
+//   }
+//   to {
+//     filter: blur(0px);
+//   }
+// }
+
+// .remove-blur-content {
+//   animation: remove-blur 1s ease;
+//   animation-fill-mode: both;
+// }
+
+// #right-content {
+//   width: 50%;
+//   height: 100%;
+
+//   overflow: hidden;
+
+//   transform: translateX(3rem) translateY(-2rem);
+// }
+
+// #button-container {
+//   flex-direction: column;
+//   position: absolute;
+//   z-index: 89;
+// }
+
+// .button-title {
+//   position: absolute;
+//   z-index: 999;
+
+//   cursor: pointer;
+// }
+
+// .button-placard {
+//   position: absolute;
+//   z-index: 90;
+
+//   filter: blur(1px);
+//   cursor: pointer;
+// }
+
+// #login-title {
+//   transform: translateX(-1rem);
+// }
+
+// #sign-up-title {
+//   transform: translateX(-3rem);
+// }
+
+// #sign-up-title-hover {
+//   transform: translateX(-3rem);
+//   filter: brightness(0.1);
+// }
+
+// #sign-up-button-hover {
+//   position: absolute;
+//   z-index: 99;
+// }
+
+// // #view-aa-title{
+// // }
+
+// #login-button {
+//   scale: $scale;
+//   transform: translateY(-7rem);
+
+//   transition: all 0.3s cubic-bezier(1, 0, 0, 1);
+// }
+
+// #sign-up-button {
+//   scale: $scale;
+// }
+
+// #view-aa-button {
+//   scale: $scale;
+//   transform: translateY(7rem);
+// }
+
+// #buttonHolder-circle {
+//   position: absolute;
+//   z-index: 80;
+//   scale: $scale;
+
+//   transform: translateX(-2rem) translateY(-2rem);
+// }
+
+// #buttonHolder-line {
+//   position: absolute;
+//   z-index: 80;
+//   transform: translateX(3rem) translateY(-2rem);
+
+//   scale: $scale;
+// }
+
+// #buttonHolder-glassPieces {
+//   position: absolute;
+//   z-index: 81;
+//   scale: $scale;
+// }
+
+// #buttonHolder-background {
+//   position: absolute;
+//   z-index: 10;
+//   scale: $scale;
+
+//   opacity: 0.95;
+//   transform: translateX(-2rem);
+//   filter: blur(25px) brightness(50%);
+// }
+
+// #voidPiece-1 {
+//   position: absolute;
+//   z-index: 71;
+//   scale: $scale;
+
+//   transform: translateY(2rem);
+// }
+
+// #voidPiece-2 {
+//   position: absolute;
+//   z-index: 70;
+//   scale: $scale;
+
+//   transform: translateY(7rem);
+// }
+
+// //CHECKBOX CSS____________________________________________________________________________________
+// $checkboxScale: 0.45;
+
+// $animationDur-cb: 10s;
+
+// $animationLayer1: 8rem;
+// $animationLayer2: 5rem;
+// $animationLayer3: 2rem;
+// $animationLayer4: 1rem;
+
+// #checkbox {
+//   width: 100%;
+//   height: 100%;
+
+//   position: absolute;
+//   z-index: 1;
+
+//   overflow: hidden;
+//   display: none;
+// }
+
+// #blur-background {
+//   width: 100%;
+//   height: 100%;
+//   filter: blur(2rem);
+
+//   background-color: #3f3636;
+//   opacity: 0.7;
+
+//   position: absolute;
+//   z-index: 90;
+// }
+
+// #checkbox-content {
+//   position: absolute;
+//   z-index: 99;
+//   scale: $checkboxScale;
+// }
+
+// .pos-absolute {
+//   position: absolute;
+// }
+
+// @keyframes textbox-container-appear {
+//   from{
+//     transform: translateX(-40rem) translateY(2rem);
+//     scale: 0.5;
+//     opacity: 0;
+//   }
+//   to{
+//     transform: translateX(11rem) translateY(-2rem) rotate(-3deg);
+//   }
+// }
+
+// .textbox-appear-animation{
+//   animation: textbox-container-appear 0.5s cubic-bezier(1, 0, 0, 1);
+//   animation-fill-mode: both;
+// }
+
+// #textbox-container {
+//   transform-origin: center right;
+//   transform: translateY(-2rem) translateX(11rem) rotate(-3deg);
+// }
+
+// #TextBox-Title {
+//   transform: translateX(-13rem);
+// }
+
+// // #TextBox-Outline{
+
+// // }
+
+// // #Textbox{
+
+// // }
+
+
+
+// #Checkbox-Title {
+//   transform: translateX(-1rem);
+// }
+
+// #QuestionMark {
+//   transform: translateY(-3rem);
+// }
+
+// #QuestionMark-Outline {
+//   transform: translateX(-1.3rem) translateY(-.5rem);
+//   opacity: 0.6;
+// }
+
+// #QuestionMark-Decor {
+//   transform: translateX(-5rem) translateY(2rem);
+
+// }
+
+// @keyframes questionMark-radiant-appear {
+//   0%{
+//     scale: 0;
+//     opacity: 0;
+//     filter: blur(50px);
+//   }
+//   100%{
+//     scale: 1;
+//     opacity: 1;
     
-  }
-}
+//   }
+// }
 
-.questionMark-radiant-appear{
-  animation: questionMark-radiant-appear 2s cubic-bezier(1, 0, 0, 1);
-  animation-fill-mode: both;
-}
+// .questionMark-radiant-appear{
+//   animation: questionMark-radiant-appear 2s cubic-bezier(1, 0, 0, 1);
+//   animation-fill-mode: both;
+// }
 
-@keyframes questionMark-background-container-appear {
-  0%{
-    scale: 0;
-    opacity: 0;
-    filter: blur(50px);
-  }
-  100%{
-    scale: 1;
-    opacity: 1;
+// @keyframes questionMark-background-container-appear {
+//   0%{
+//     scale: 0;
+//     opacity: 0;
+//     filter: blur(50px);
+//   }
+//   100%{
+//     scale: 1;
+//     opacity: 1;
     
-  }
-}
-
-.questionMark-background-container-appear{
-  animation: questionMark-background-container-appear 2s cubic-bezier(0, 0, 0, 1) 0.2s;
-  animation-fill-mode: both;
-}
-
-#QuestionMark-Background {
-  transform: translateX(15rem);
-}
-
-@keyframes questionMark-container-appear {
-  0%{
-    scale: 0;
-  }
-  10%,20%{
-    scale: 1.6;
-  }
-  100%{
-    scale: 1;
-  }
-}
-
-.questionMark-appear-animation{
-  animation: questionMark-container-appear 1s cubic-bezier(0, 0, 0, 1) 0.4s;
-  animation-fill-mode: both;
-}
-
-#questionMark-container {
-  transform: translateX(-22rem);
-  scale: 1.2;
-}
-
-@keyframes glassPieces-1-appear {
-  0%{
-    scale: 0;
-    filter: blur(15px);
-    transform: translateY(4rem) translateX(-16rem);
-  }
-  100%{
-    scale: 1.2;
-    filter: blur(5px);
-    transform: translateY(4rem) translateX(-16rem);
-  }
-}
-
-.glassPieces-1-appear-animation{
-  animation: glassPieces-1-appear 2s cubic-bezier(0, 0, 0, 1) 0s;
-  animation-fill-mode: both;
-}
-
-@keyframes glassPieces-2-appear {
-  0%{
-    scale: 0;
-    filter: blur(15px);
-    transform: translateY(22rem) translateX(-5rem);
-  }
-  100%{
-    scale: 0.8;
-    filter: blur(10px);
-    transform: translateY(22rem) translateX(-5rem);
-  }
-}
-
-.glassPieces-2-appear-animation{
-  animation: glassPieces-2-appear 5s cubic-bezier(0, 0, 0, 1) 0s;
-  animation-fill-mode: both;
-}
-
-@keyframes glassPieces-3-appear {
-  0%{
-    scale: 0;
-    filter: blur(15px);
-    transform: translateY(3rem) translateX(24rem);
-  }
-  100%{
-    scale: 1.3;
-    transform: translateY(3rem) translateX(24rem);
-  }
-}
-
-.glassPieces-3-appear-animation{
-  animation: glassPieces-3-appear 3s cubic-bezier(0, 0, 0, 1) 0s;
-  animation-fill-mode: both;
-}
-
-// #GlassPieces-1 {
-//   // transform: translateY(4rem) translateX(-16rem);
+//   }
 // }
 
-// #GlassPieces-2 {
-//   // transform: translateY(22rem) translateX(-5rem);
+// .questionMark-background-container-appear{
+//   animation: questionMark-background-container-appear 2s cubic-bezier(0, 0, 0, 1) 0.2s;
+//   animation-fill-mode: both;
 // }
 
-// #GlassPieces-3 {
-//   // transform: translateY(3rem) translateX(24rem);
+// #QuestionMark-Background {
+//   transform: translateX(15rem);
 // }
 
-@keyframes cb-Line-1-appear {
-  0%{
-    scale: 0;
-  }
-  100%{
-    scale: 1;
-  }
-}
+// @keyframes questionMark-container-appear {
+//   0%{
+//     scale: 0;
+//   }
+//   10%,20%{
+//     scale: 1.6;
+//   }
+//   100%{
+//     scale: 1;
+//   }
+// }
 
-.cb-Line-1-appear{
-  animation: cb-Line-1-appear 0.4s cubic-bezier(1, 0, 0, 1) 0s;
-  animation-fill-mode: both;
-}
+// .questionMark-appear-animation{
+//   animation: questionMark-container-appear 1s cubic-bezier(0, 0, 0, 1) 0.4s;
+//   animation-fill-mode: both;
+// }
 
-.cb-Line-2-appear{
-  animation: cb-Line-1-appear 0.6s cubic-bezier(1, 0, 0, 1) 0s;
-  animation-fill-mode: both;
-}
+// #questionMark-container {
+//   transform: translateX(-22rem);
+//   scale: 1.2;
+// }
 
-.cb-Line-3-appear{
-  animation: cb-Line-1-appear 1s cubic-bezier(1, 0, 0, 1) 0s;
-  animation-fill-mode: both;
-}
+// @keyframes glassPieces-1-appear {
+//   0%{
+//     scale: 0;
+//     filter: blur(15px);
+//     transform: translateY(4rem) translateX(-16rem);
+//   }
+//   100%{
+//     scale: 1.2;
+//     filter: blur(5px);
+//     transform: translateY(4rem) translateX(-16rem);
+//   }
+// }
 
-#Checkbox-Line-1 {
-  transform: translateY(1rem) translateX(18rem);
-}
+// .glassPieces-1-appear-animation{
+//   animation: glassPieces-1-appear 2s cubic-bezier(0, 0, 0, 1) 0s;
+//   animation-fill-mode: both;
+// }
 
-#Checkbox-Line-2 {
-  transform: translateY(-5rem) translateX(-4rem);
-}
+// @keyframes glassPieces-2-appear {
+//   0%{
+//     scale: 0;
+//     filter: blur(15px);
+//     transform: translateY(22rem) translateX(-5rem);
+//   }
+//   100%{
+//     scale: 0.8;
+//     filter: blur(10px);
+//     transform: translateY(22rem) translateX(-5rem);
+//   }
+// }
 
-#Checkbox-Line-3 {
-  transform: translateY(25rem) translateX(20rem);
-}
+// .glassPieces-2-appear-animation{
+//   animation: glassPieces-2-appear 5s cubic-bezier(0, 0, 0, 1) 0s;
+//   animation-fill-mode: both;
+// }
 
-@keyframes cb-VoidPiece-1-appear {
-  0%{
-    scale: 0;
-    transform: rotate(90deg);
-  }
-  100%{
-    scale: 1;
-  }
-}
+// @keyframes glassPieces-3-appear {
+//   0%{
+//     scale: 0;
+//     filter: blur(15px);
+//     transform: translateY(3rem) translateX(24rem);
+//   }
+//   100%{
+//     scale: 1.3;
+//     transform: translateY(3rem) translateX(24rem);
+//   }
+// }
 
-.cb-VoidPiece-1-appear{
-  animation: cb-VoidPiece-1-appear 3s cubic-bezier(0, 0, 0, 1) 0s;
-  animation-fill-mode: both;
-}
+// .glassPieces-3-appear-animation{
+//   animation: glassPieces-3-appear 3s cubic-bezier(0, 0, 0, 1) 0s;
+//   animation-fill-mode: both;
+// }
 
-@keyframes cb-VoidPiece-2-appear {
-  0%{
-    scale: 0;
-    transform: rotate(-90deg);
-  }
-  100%{
-    scale: 1;
-  }
-}
+// // #GlassPieces-1 {
+// //   // transform: translateY(4rem) translateX(-16rem);
+// // }
 
-.cb-VoidPiece-2-appear{
-  animation: cb-VoidPiece-2-appear 2s cubic-bezier(0, 0, 0, 1) 0s;
-  animation-fill-mode: both;
-}
+// // #GlassPieces-2 {
+// //   // transform: translateY(22rem) translateX(-5rem);
+// // }
 
-#button-container-checkbox {
-  transform-origin: right center;
-  // transform: translateY(7rem) translateX(20rem) rotate(-1deg);
-}
+// // #GlassPieces-3 {
+// //   // transform: translateY(3rem) translateX(24rem);
+// // }
 
-@keyframes button-container-checkbox-appear {
-  0%{
-    transform: translateY(4rem) translateX(27rem);
-  }
-  100%{
-    transform: translateY(9rem) translateX(20rem) rotate(-1deg);
-  }
-}
+// @keyframes cb-Line-1-appear {
+//   0%{
+//     scale: 0;
+//   }
+//   100%{
+//     scale: 1;
+//   }
+// }
 
-.button-container-checkbox-appear{
-  animation: button-container-checkbox-appear 1s cubic-bezier(0, 0, 0, 1) 0s;
-  animation-fill-mode: both;
-}
+// .cb-Line-1-appear{
+//   animation: cb-Line-1-appear 0.4s cubic-bezier(1, 0, 0, 1) 0s;
+//   animation-fill-mode: both;
+// }
 
-@keyframes No-checkbox-appear {
-  0%{
-    transform: translateX(10rem) scaleX(0.6);
-  }
-  100%{
-    transform: translateX(-5rem);
-  }
-}
+// .cb-Line-2-appear{
+//   animation: cb-Line-1-appear 0.6s cubic-bezier(1, 0, 0, 1) 0s;
+//   animation-fill-mode: both;
+// }
 
-@keyframes Yes-checkbox-appear {
-  0%{
-    transform: translateX(12rem) scaleX(0.6);
-  }
-  100%{
-    transform: translateX(7rem);
-  }
-}
+// .cb-Line-3-appear{
+//   animation: cb-Line-1-appear 1s cubic-bezier(1, 0, 0, 1) 0s;
+//   animation-fill-mode: both;
+// }
 
-.No-checkbox-appear{
-  animation: No-checkbox-appear 1s cubic-bezier(0, 0, 0, 1) 0s;
-  animation-fill-mode: both;
-}
+// #Checkbox-Line-1 {
+//   transform: translateY(1rem) translateX(18rem);
+// }
 
-.Yes-checkbox-appear{
-  animation: Yes-checkbox-appear 1s cubic-bezier(0, 0, 0, 1) 0s;
-  animation-fill-mode: both;
-}
+// #Checkbox-Line-2 {
+//   transform: translateY(-5rem) translateX(-4rem);
+// }
 
-@keyframes checkbox-line-appear {
-  0%{
-    transform: scaleX(0);
-  }
-  100%{
-    transform: scaleX(1.4);
-  }
-}
+// #Checkbox-Line-3 {
+//   transform: translateY(25rem) translateX(20rem);
+// }
 
-.checkbox-line-appear{
-  animation: checkbox-line-appear 2s cubic-bezier(0, 0, 0, 1) 0s;
-  animation-fill-mode: both;
-}
+// @keyframes cb-VoidPiece-1-appear {
+//   0%{
+//     scale: 0;
+//     transform: rotate(90deg);
+//   }
+//   100%{
+//     scale: 1;
+//   }
+// }
 
-#No-checkbox {
-  cursor: pointer;
-  // transform: translateX(-5rem);
-}
+// .cb-VoidPiece-1-appear{
+//   animation: cb-VoidPiece-1-appear 3s cubic-bezier(0, 0, 0, 1) 0s;
+//   animation-fill-mode: both;
+// }
 
-#Yes-checkbox {
-  cursor: pointer;
-  // transform: translateX(7rem);
-}
+// @keyframes cb-VoidPiece-2-appear {
+//   0%{
+//     scale: 0;
+//     transform: rotate(-90deg);
+//   }
+//   100%{
+//     scale: 1;
+//   }
+// }
+
+// .cb-VoidPiece-2-appear{
+//   animation: cb-VoidPiece-2-appear 2s cubic-bezier(0, 0, 0, 1) 0s;
+//   animation-fill-mode: both;
+// }
+
+// #button-container-checkbox {
+//   transform-origin: right center;
+//   // transform: translateY(7rem) translateX(20rem) rotate(-1deg);
+// }
+
+// @keyframes button-container-checkbox-appear {
+//   0%{
+//     transform: translateY(4rem) translateX(27rem);
+//   }
+//   100%{
+//     transform: translateY(9rem) translateX(20rem) rotate(-1deg);
+//   }
+// }
+
+// .button-container-checkbox-appear{
+//   animation: button-container-checkbox-appear 1s cubic-bezier(0, 0, 0, 1) 0s;
+//   animation-fill-mode: both;
+// }
+
+// @keyframes No-checkbox-appear {
+//   0%{
+//     transform: translateX(10rem) scaleX(0.6);
+//   }
+//   100%{
+//     transform: translateX(-5rem);
+//   }
+// }
+
+// @keyframes Yes-checkbox-appear {
+//   0%{
+//     transform: translateX(12rem) scaleX(0.6);
+//   }
+//   100%{
+//     transform: translateX(7rem);
+//   }
+// }
+
+// .No-checkbox-appear{
+//   animation: No-checkbox-appear 1s cubic-bezier(0, 0, 0, 1) 0s;
+//   animation-fill-mode: both;
+// }
+
+// .Yes-checkbox-appear{
+//   animation: Yes-checkbox-appear 1s cubic-bezier(0, 0, 0, 1) 0s;
+//   animation-fill-mode: both;
+// }
+
+// @keyframes checkbox-line-appear {
+//   0%{
+//     transform: scaleX(0);
+//   }
+//   100%{
+//     transform: scaleX(1.4);
+//   }
+// }
+
+// .checkbox-line-appear{
+//   animation: checkbox-line-appear 2s cubic-bezier(0, 0, 0, 1) 0s;
+//   animation-fill-mode: both;
+// }
+
+// #No-checkbox {
+//   cursor: pointer;
+//   // transform: translateX(-5rem);
+// }
+
+// #Yes-checkbox {
+//   cursor: pointer;
+//   // transform: translateX(7rem);
+// }
 
 
-#checkbox-content {
-  // transform: translateY(-4rem);
-  // animation: fly-around 10s ease 0s;
-  animation-iteration-count: infinite;
-}
+// #checkbox-content {
+//   // transform: translateY(-4rem);
+//   // animation: fly-around 10s ease 0s;
+//   animation-iteration-count: infinite;
+// }
 
-@keyframes fly-around {
-  0%, 100%{
-    transform: translateX(5rem) translateY(-4rem);   
-  }
-  50%{
-    transform: translateX(-1rem) translateY(-4rem);
+// @keyframes fly-around {
+//   0%, 100%{
+//     transform: translateX(5rem) translateY(-4rem);   
+//   }
+//   50%{
+//     transform: translateX(-1rem) translateY(-4rem);
     
-  }
-}
+//   }
+// }

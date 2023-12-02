@@ -1,4 +1,19 @@
-<div id="container" class="center-center" (click)="navigateTo()">
+<div id="landingPageContainer" class="center-center" (click)="navigateTo('menu-page')">
+
+    <app-title-card [currentPage]="title" style="margin-bottom: 3rem;"></app-title-card>
+
+    <div id="placardBox" class="center-center">
+
+        <div id="leftDecor" class="decor"></div>
+        <div id="placard" class="center-center">You Be The Judge</div>
+        <div id="rightDecor" class="decor"></div>
+    </div>
+
+</div>
+
+
+
+<!-- <div id="container" class="center-center" (click)="navigateTo()">
     
     <div class="title_box center-center">
         <div id="title" class="appear-animate animate-speed-0001 slow-animate-dur">
@@ -61,4 +76,4 @@
             </svg>            
         </div>
     </div>
-</div>
+</div> -->
