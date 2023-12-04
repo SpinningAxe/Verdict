@@ -1,243 +1,241 @@
-// #container {
-//     width: 100vw;
-//     height: 100vh;
-//     background-color: #08080f;
+$color-70: #2F2C31;
+$color-20: #171212;
+$color-20-2: #190F10;
+$color-10: #D7E7E2;
+
+#checkbox-decor{
+    pointer-events: none;
+    position: absolute;
+    scale:0.65;
+    transform: translateX(0.5rem) translateY(-0.2rem);
+}
+
+.checkmark{
+    pointer-events: none;
+    transform-origin: center center;
+    position: absolute;
+    
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(1,0,0,1);
+    transform: translateX(-3.1rem) translateY(-0.8rem) scale(1);
+}
+
+.checkmark-ticked{
+    opacity: 1;
+    transform: translateX(-3.1rem) translateY(-0.8rem) scale(0.6);
+}
+
+.checkbox{
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: $color-20;
+
+    border-radius: 8px;
+    margin-right: 1rem;
+
+    transition: all 0.5s cubic-bezier(1,0,0,1);
+    border: 2px solid $color-20;
+    cursor: pointer;
+}
+
+.checkbox-tick{
+    rotate: 45deg;
+    border: 2px solid $color-10;
+}
+
+#rememberMe{
+    flex-direction: row;
+}
+
+
+.center-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#loginPageContainer{
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+
+.section{
+    display: flex;
+    flex-direction: column;
+    color: $color-10;
+
+    margin: .5rem 0;
+    width: 75%;
+}
+
+.sectionTitle{
+    margin: 0 0 0 1rem;
+}
+
+.input{
+    box-sizing: border-box;
+
+    padding: 0.5rem 1rem;
+    margin: .5rem 0;
+}
+
+#forgotPasswordP{
+    opacity: 0.5;
+    text-align: center;
+    margin: 0;
+}
+
+#login-background{
+    margin-right: auto;
+
+  flex-direction: column;
+  width: 40vw;
+  height: 90vh;
+  background: radial-gradient(
+    220.92% 49.94% at 50.08% 50.06%,
+    #06050a 0%,
+    #190f10 49.89%,
+    rgba(6, 5, 10, 0) 99.05%
+  );
+}
+
+#login-banner{
+    width: 80vw;
+    height: 10vh;
+    background-color: $color-10;
+    color: $color-20;
+}
+
+#backButton{
+    width: 5rem;
+    height: 5rem;
+    color: $color-10;
+
+    text-align: center;
+
+    cursor:pointer;
+    transition: all 0.2s ease;
+
+    margin: auto 5rem 2rem auto;
+
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+}
+
+#backButton:hover{
+    transform: translateY(-4px);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.input{
+    border: none;
+    background-color: $color-20;
+    color: $color-10;
+}
+
+.button {
+    
+    z-index: 1;
   
-//     overflow: hidden;
+    color: $color-10;
   
-//     justify-content: space-between;
-// }
-// #leftContent{
-//     margin-top: 8rem;
-//     width: 60%;
-//     height: 100%;
-//     // border: 1px solid white;
-    
-//     flex-direction: column;
-// }
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.44px;
+  
+    width: 75%;
+    height: 63px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: $color-20-2;
+  
+    margin: 1rem 0 0;
+  
+    transform-origin: left center;
+  
+    cursor: pointer;
+  }
+  
+  $button-animate: 0.5s;
+  
+  .button:hover {
+    z-index: 99;
+  
+    transition: width $button-animate cubic-bezier(0, 0, 0, 1),
+      letter-spacing $button-animate cubic-bezier(0, 0, 0, 1);
+    //   font-size $button-animate cubic-bezier(0, 0, 0, 1);
+    width: 77%;
+    letter-spacing: 5px;
+  
+    background-color: $color-10;
+    box-shadow: 0px 0px 36px $color-10;
+  
+    color: $color-20-2;
+  
+    border-radius: 0px;
+  }
 
-// .center-center{
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
+// KEYFRAMES ---------------------------------------------------------
 
-//     box-sizing: border-box;
-// }
+@keyframes login-background-appear {
+    from{
+        opacity: 0;
+        transform: translateX(-15rem);
+    }
+}
+@keyframes loginPage-to-menuPage-background {
+    to{
+        opacity: 0;
+        transform: translateX(-5rem);
+    }
+}
+@keyframes section-appear {
+    from{
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+}
 
-// .pos-abs{
-//     position: absolute;
-// }
+@keyframes backButton-out {
+    to{
+      opacity: 0;
+      transform: translateX(2rem) translateY(2rem);
+    }
+  }
 
-// .pos-relative{
-//     position: relative;
-// }
+// ANIMATION CLASS ---------------------------------------------------
 
-// $scale: 0.7;
+.login-background-appear{
+    animation: login-background-appear 0.5s cubic-bezier(0,0,0,1);
+    animation-fill-mode: both;
+}
 
-// #titleCard{
-//     scale: $scale;
-//     rotate: 5deg;
-    
-//     top: 1px;
-//     left: 1px;
+.section-appear{
+    animation: section-appear 1s cubic-bezier(0,0,0,1);
+    animation-fill-mode: both;
+}
+#emailAddress{
+    animation-delay: 0s
+}
+#password{
+    animation-delay: 0.2s
+}
+#rememberMe{
+    animation-delay: 0.4s
+}
 
-//     margin-top: 6rem;
-//     margin-left: 22rem;
+.loginPage-to-menuPage-background{
+    animation: loginPage-to-menuPage-background 0.2s cubic-bezier(0,0,0,1);
+    animation-fill-mode: both;
+}
 
-//     transform: translateX(-3rem);
-// }
-
-// #TitleCard-Decor-2{
-//     transform: translateX(-7rem) translateY(2rem);
-// }
-// #TitleCard-Decor-1{
-//     transform: translateX(5rem) translateY(0.6rem);
-// }
-// #TitleCard-InkSpot{
-//     transform: translateX(-7rem) translateY(-1rem);
-// }
-// #TitleCard-Radiant{
-//     transform: translateX(-7rem);
-// }
-// #TitleCard-Ring{
-//     transform: translateX(-7rem);
-// }
-// // #TitleCard-Placard{
-    
-// // }
-// #TitleCard-Title{
-//     transform: translateX(-5rem);
-// }
-
-// #loginBox{
-//     flex-direction: column;
-// }
-
-// #emailAddress{
-//     scale: $scale;
-//     rotate: -2deg;
-// }
-
-// #Email-Decor{
-//     position: relative;
-//     right: -10.5rem
-// }
-
-// // #Email-Placard{
-    
-// // }
-
-// #Email-Title{
-//     position: relative;
-//     top: -3rem;
-//     left: -32rem
-    
-// }
-
-// #password{
-//     scale: $scale;
-//     rotate: -1deg;
-
-//     position: relative;
-//     top:-.5rem;
-//     left: 1rem;
-// }
-
-// #Password-Decor{
-//     left: 41.7rem;
-//     top: 1.4rem;
-// }
-
-// #Password-Placard{
-//     right: 1.5rem
-// }
-
-// #Password-Title{
-//     top: -3rem;
-//     left: -32.1rem
-    
-// }
-
-// #Password-Forgor{
-//     top: 3rem;
-//     left: -32.1rem
-    
-// }
-
-// #rememberMe{
-//     scale: $scale;
-// }
-
-// #RememberMe-Tickbox{
-//     left: 1rem
-// }
-
-// #RememberMe-Decor{
-//     left: -3rem;
-//     top:-0.2rem;
-// }
-
-// #RememberMe-Title{
-//     left: -14.5rem;
-//     top: -0.5rem
-// }
-
-// #RememberMe-CheckMark{
-//     left: -28.1rem;
-//     top: -1.5rem
-// }
-
-
-// // .input{
-
-// // }
-
-// // #passwordInput{
-
-// // }
-
-
-// // .checkbox{
-
-// // }
-// // #buttonBox{
-
-// // }
-
-// #loginButton{
-//     scale: $scale;
-//     position: relative;
-//     left: 3rem;
-//     top: -0.5rem;
-// }
-// #LoginButton-Decor{
-//     left: 22rem;
-//     top: -1.5rem;
-// }
-
-// #LoginButton-Placard{
-//     left: -15rem
-// }
-
-// #LoginButton-Title{
-//     top: -0.5rem;
-//     left: -33rem
-    
-// }
-
-// #backButton{
-//     color: white;
-//     margin: 4rem;
-//     font-weight: bold;
-
-//     top:14rem
-// }
-
-// @keyframes backgroundPopUp{
-//     from{
-//         scale: 0;
-//     }
-//     to{
-//         scale: $scale;
-//     }
-// }
-
-// #background{
-//     scale: $scale;
-
-//     transform-origin: center center;
-//     animation: backgroundPopUp 1s cubic-bezier(0,0,0,1) 0s;
-// }
-
-// // @keyframes backgroundVoidPiece{
-// //     0%{
-// //         transform: rotate(90deg);
-// //     }
-// //     50%{
-// //         transform: rotate(-180deg);
-// //     }
-// //     100%{
-// //         // scale: $scale;
-// //         transform: rotate(0deg);
-// //     }
-// // }
-
-// #Background-VoidPiece-1{
-//     transform: translateX(-8rem) translateY(15rem);
-//     transform-origin: center center;
-//     animation: backgroundVoidPiece 2s cubic-bezier(1,0,0,1) 0s;
-//     animation-fill-mode: both;
-// }
-// #Background-VoidPiece-2{
-//     transform: translateX(-8rem) translateY(15rem);
-// }
-// #Background-InkSpot{
-//     transform: translateX(0rem) translateY(15rem);
-// }
-// #Background-Lines{
-//     transform: translateX(-4rem) translateY(12rem);
-// }
-// #Background-GlassPieces{
-//     transform: translateX(0rem) translateY(38rem);
-// }
-
+.backButton-out{
+    animation: backButton-out 0.2s cubic-bezier(0,0,0,1);
+    animation-fill-mode: both;
+}

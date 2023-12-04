@@ -1,25 +1,249 @@
-#container{
-    width: 100vw;
-    height: 100vh;
-    background-color: black;
-    
-    display: flex;
+$color-70: #2f2c31;
+$color-20: #171212;
+$color-20-2: #190f10;
+$color-10: #d7e7e2;
+
+#menuPageContainer {
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+
+  overflow: hidden;
 }
 
-.button{
-    background-color: white;
-    color: black;
+.center-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    width: 20rem;
-    height: 3rem;
-    margin: 1rem;
+#buttonBox {
+  margin: auto 0 5rem;
 
-    border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100vw;
+}
+
+.textButton {
+  width: auto;
+  height: auto;
+  color: $color-10;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  // margin: auto auto 5rem 5rem;
+  // text-underline-offset: 4px;
+
+  font-family: "Times New Roman", Times, serif;
+  font-size: 24px;
+
+  margin: 0 10rem;
+}
+
+.textButton:hover {
+  transform: translateY(-4px);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.center-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  color: $color-10;
+
+  margin: 0.5rem 0;
+  width: 75%;
+}
+
+.sectionTitle {
+  margin: 0 0 0 1rem;
+}
+
+.input {
+  box-sizing: border-box;
+
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+}
+
+#emailReminderP {
+  opacity: 0.5;
+  text-align: center;
+  margin: 0;
+}
+
+#register-background {
+  margin: auto 0 auto auto;
+
+  flex-direction: column;
+  width: 40vw;
+  height: 90vh;
+  background: radial-gradient(
+    220.92% 49.94% at 50.08% 50.06%,
+    #06050a 0%,
+    #190f10 49.89%,
+    rgba(6, 5, 10, 0) 99.05%
+  );
+}
+
+#register-banner {
+  width: 80vw;
+  height: 10vh;
+  background-color: $color-10;
+  color: $color-20;
+}
+
+.input {
+  border: none;
+  background-color: $color-20;
+  color: $color-10;
+}
+
+.button {
+  z-index: 1;
+
+  color: $color-10;
+
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.44px;
+
+  width: 75%;
+  height: 63px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: $color-20-2;
+
+  margin: 1rem 0 0;
+
+  transform-origin: left center;
+
+  cursor: pointer;
+}
+
+$button-animate: 0.5s;
+
+.button:hover {
+  z-index: 99;
+
+  transition: width $button-animate cubic-bezier(0, 0, 0, 1),
+    letter-spacing $button-animate cubic-bezier(0, 0, 0, 1);
+  //   font-size $button-animate cubic-bezier(0, 0, 0, 1);
+  width: 77%;
+  letter-spacing: 5px;
+
+  background-color: $color-10;
+  box-shadow: 0px 0px 36px $color-10;
+
+  color: $color-20-2;
+
+  border-radius: 0px;
+}
+
+#backButton {
+    width: 5rem;
+    height: 5rem;
+    color: $color-10;
 
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-    cursor: pointer;
+    cursor:pointer;
+    transition: all 0.2s ease;
+
+    margin: auto auto 2rem 5rem;
+
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+}
+
+#backButton:hover {
+  transform: translateY(-4px);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+// KEYFRAMES ---------------------------------------------------------
+
+@keyframes register-background-appear {
+  from {
+    opacity: 0;
+    transform: translateX(15rem);
+  }
+}
+@keyframes menuPage-to-registerPage-background {
+  to {
+    opacity: 0;
+    transform: translateX(-5rem);
+  }
+}
+@keyframes section-appear {
+  from {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+}
+
+@keyframes backButton-out {
+    to{
+      opacity: 0;
+      transform: translateX(-2rem) translateY(2rem);
+    }
+  }
+
+@keyframes registerPage-to-menuPage-background {
+    to{
+        opacity: 0;
+        transform: translateX(5rem);
+    }
+}
+
+// ANIMATION CLASS ---------------------------------------------------
+
+.register-background-appear {
+  animation: register-background-appear 0.5s cubic-bezier(0, 0, 0, 1);
+  animation-fill-mode: both;
+}
+
+.section-appear {
+  animation: section-appear 1s cubic-bezier(0, 0, 0, 1);
+  animation-fill-mode: both;
+}
+#emailAddress {
+  animation-delay: 0s;
+}
+#username {
+  animation-delay: 0.2s;
+}
+#password {
+  animation-delay: 0.4s;
+}
+
+.menuPage-to-registerPage-background {
+  animation: menuPage-to-registerPage-background 0.2s cubic-bezier(0, 0, 0, 1);
+  animation-fill-mode: both;
+}
+
+.backButton-out{
+    animation: backButton-out 0.2s cubic-bezier(0,0,0,1);
+    animation-fill-mode: both;
+}
+
+.registerPage-to-menuPage-background{
+    animation: registerPage-to-menuPage-background 0.2s cubic-bezier(0,0,0,1);
+    animation-fill-mode: both;
 }

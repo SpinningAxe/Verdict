@@ -1,4 +1,29 @@
-<div id="container">
-    <div class="button" (click)="navigateTo('verdict')">Sign Up</div>
-    <div class="button" (click)="navigateTo('menu-page')">Back</div>
+<div id="menuPageContainer" class="center-center">
+
+    <app-title-card [currentPage]="title"></app-title-card>
+
+    <div id="register-background" class="center-center register-background-appear" style="margin-top: 6rem;">
+
+        <div id="emailAddress" class="section section-appear" style="margin-top: 2rem;">
+            <p class="sectionTitle">Email Address</p>
+            <input id="emailAddressInput" class="input">
+            <p id="emailReminderP">Please register with your @itss email</p>
+        </div>
+
+        <div id="username" class="section section-appear">
+            <p class="sectionTitle">Username</p>
+            <input id="usernameInput" class="input">
+        </div>
+
+        <div id="password" class="section section-appear">
+            <p class="sectionTitle">Password</p>
+            <input id="passwordInput" class="input" type="password">
+            
+        </div>
+
+        <div id="registerButton" (click)="navigateTo('verdict')" class="button center-center" style="margin-top: 4rem;">REGISTER</div>
+
+    </div>
+        
+    <div id="backButton" (click)="navigateTo('menu-page')">Back</div>
 </div>

@@ -9,17 +9,17 @@ $color-10: #D7E7E2;
   justify-content: center;
 }
 
-.abs-container{
-  position: absolute;
-  top:1px;
-  left:1px;
-
-  transition: all 0.5s cubic-bezier(1,0,0,1);
-}
-
 #container{
+  position: absolute;
+  right:0; 
+  top:0;
+  left: 0;
+
   width: 100vw;
+
   flex-direction: column;
+
+  pointer-events: none;
 }
 
 #Verdict{
@@ -66,20 +66,57 @@ $color-10: #D7E7E2;
   width: 100vw;
   height: 3px;
   background-color: $color-10;
-  box-shadow: 0px 7px 24px 0px $color-10;
+  box-shadow: 0px 0px 24px 0px $color-10;
 
   position: relative;
-  bottom: 3.65rem;
+  bottom: 6rem;
+}
+
+.aboutPage-titleCard{
+  scale: 0.7;
+  transform: translateY(-3rem);
 }
 
 .menuPage-titleCard{
   scale: 0.7;
-  transform: translateX(30rem) translateY(-2.5rem);
+  transform: translateX(43vw) translateY(-3rem);
 }
 
-.menuPage-container{
-  // position: absolute;
-  transform: translateY(-13.5rem);
+.registerPage-titleCard{
+  scale: 0.7;
+  transform: translateX(-43vw) translateY(-3rem);
+}
+
+.landingPage-container{
+  position: absolute;
+  left:0; 
+  top:0;
+
+  transform: translateY(20vh);
+}
+
+#creator{
+  position: relative;
+  // top: 1rem;
+  left: 8rem;
+
+  color: $color-10;
+
+  text-shadow: 0px 0px 50px $color-10;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.6px;
+
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+.hidden{
+  opacity: 0;
 }
 // ANIMATION KEYFRAME ------------------------------------------------
 
@@ -104,22 +141,129 @@ $color-10: #D7E7E2;
 @keyframes landingPage-to-menuPage-titleCard {
   to{
     scale: 0.7;
-    transform: translateX(30rem) translateY(-2.5rem);
+    transform: translateX(43vw) translateY(-3em);
   }
 }
 @keyframes landingPage-to-menuPage-container {
+  from{
+    transform: translateY(20vh);
+  }
   to{
-    transform:translateY(-11.5rem)
+    transform:translateY(0)
   }
 }
 
+@keyframes menuPage-to-aboutPage-titleCard {
+  to{
+    scale: 0.7;
+    transform: translateY(-3rem);
+  }
+}
+@keyframes aboutPage-to-menuPage-titleCard {
+  to{
+    scale: 0.7;
+    transform: translateX(43vw) translateY(-3rem);
+  }
+}
 
+@keyframes aboutPage-to-menuPage-creator {
+  to{
+    opacity: 0;
+  }
+}
+
+@keyframes aboutPage-creator-appear {
+  from{
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+@keyframes menuPage-to-registerPage-titleCard {
+  to{
+    scale: 0.7;
+    transform: translateX(-43vw) translateY(-3rem);
+  }
+}
+
+  // @keyframes loginPage-to-verdict-titleCard {
+  //   to{
+  //     scale: 0.7;
+  //     opacity: 0;
+  //     transform: translateX(43vw) translateY(-30vh);
+  //   }
+  // }
+  // // @keyframes loginPage-to-verdict-container {
+  // //   100%{
+  // //     transform: translateY(30vh);
+  // //   }
+  // // }
+  // @keyframes loginPage-to-verdict-horizonLine {
+  //   50%{
+  //     transform: translateY(30vh);
+  //   }
+  //   100%{
+  //     transform: translateY(30vh) scaleY(200);
+  //   }
+  // }
+
+@keyframes registerPage-to-menuPage-titleCard {
+  to{
+    scale: 0.7;
+    transform: translateX(43vw) translateY(-3rem);
+  }
+}
+@keyframes menuPage-to-verdict-container {
+  to{
+    transform: translateY(20vh);
+  }
+}
+
+@keyframes menuPage-to-verdict-titleCard {
+  from{
+    scale: 0.7;
+    transform: translateX(43vw) translateY(-3rem);
+  }
+  to{
+    scale: 1;
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes registerPage-to-verdict-titleCard {
+  from{
+    scale: 0.7;
+    transform: translateX(-43vw) translateY(-3rem);
+  }
+  to{
+    scale: 1;
+    transform: translateX(0) translateY(0);
+  }
+}
+
+// @keyframes menuPage-to-verdict-container {
+//   to{
+//     transform: translateY(20vh);
+//   }
+// }
+
+@keyframes menuPage-to-verdict-horizonLine {
+  from{
+
+  }
+  to{
+    // transform: translateY(-10vh)  scaleY(100);
+  }
+}
 // ANIMATION CLASS ------------------------------------------------
 
 .animate-fillmode-both{
   animation-fill-mode: both;
 }
-
+// LANDING PAGE ANIMATION -------------------------------------------------
 .landingPage-ITSS{
   animation: landingPageAppear-ITSS 1s cubic-bezier(1,0,0,1) 1s;
   animation-fill-mode: both;
@@ -132,13 +276,84 @@ $color-10: #D7E7E2;
   animation: landingPageAppear-horizonLine 1s cubic-bezier(1,0,0,1) 0s;
   animation-fill-mode: both;
 }
-
 .landingPage-to-menuPage-titleCard{
   animation: landingPage-to-menuPage-titleCard 0.5s cubic-bezier(1,0,0,1);
   animation-fill-mode: both;
 }
-
 .landingPage-to-menuPage-container{
   animation: landingPage-to-menuPage-container 0.5s cubic-bezier(1,0,0,1);
+  animation-fill-mode: both;
+}
+
+// FROM MENU PAGE ANIMATION ------------------------------------------------------------------
+$outAnimation: 0.4s;
+
+.menuPage-to-aboutPage-titleCard{
+  animation: menuPage-to-aboutPage-titleCard $outAnimation cubic-bezier(0,0,0,1);
+  animation-fill-mode: both;
+}
+.menuPage-to-registerPage-titleCard{
+  animation: menuPage-to-registerPage-titleCard $outAnimation cubic-bezier(0,0,0,1);
+  animation-fill-mode: both;
+}
+
+// ABOUT PAGE ANIMATION ------------------------------------------------------------------
+.aboutPage-creator-appear{
+  animation: aboutPage-creator-appear $outAnimation cubic-bezier(0,0,0,1);
+  animation-fill-mode: both;
+}
+.aboutPage-to-menuPage-creator{
+  animation: aboutPage-to-menuPage-creator $outAnimation cubic-bezier(0,0,0,1);
+  animation-fill-mode: both;
+}
+.aboutPage-to-menuPage-titleCard{
+  animation: aboutPage-to-menuPage-titleCard $outAnimation cubic-bezier(0,0,0,1);
+  animation-fill-mode: both;
+}
+
+// LOGIN PAGE ANIMATION ------------------------------------------------------------------------
+// .loginPage-to-verdict-titleCard{
+//   animation: loginPage-to-verdict-titleCard .2s cubic-bezier(0,0,0,1);
+//   animation-fill-mode: both;
+// }                  
+// .loginPage-to-verdict-horizonLine{
+//   transform-origin: center center;
+//   animation: loginPage-to-verdict-horizonLine 2s cubic-bezier(1,0,0,1);
+//   animation-fill-mode: both;
+// }
+// .loginPage-to-verdict-container{
+//   transform-origin: center center;
+//   animation: loginPage-to-verdict-container 1s cubic-bezier(0,0,0,1);
+//   animation-fill-mode: both;
+// }
+
+// REGISTER ANIMATION -----------------------------------------------------------------------
+.menuPage-to-landingPage-titleCard{
+  animation: registerPage-to-verdict-titleCard .2s cubic-bezier(0,0,0,1);
+  animation-fill-mode: both;
+}
+
+.registerPage-to-menuPage-titleCard{
+  animation: registerPage-to-menuPage-titleCard .2s cubic-bezier(0,0,0,1);
+  animation-fill-mode: both;
+}
+
+.menuPage-to-verdict-container{
+  animation: menuPage-to-verdict-container 1s cubic-bezier(1,0,0,1);
+  animation-fill-mode: both;
+}
+
+.menuPage-to-verdict-titleCard{
+  animation: menuPage-to-verdict-titleCard 1s cubic-bezier(1,0,0,1);
+  animation-fill-mode: both;
+}
+
+.menuPage-to-verdict-horizonLine{
+  transform-origin: center center;
+  animation: menuPage-to-verdict-horizonLine 1s cubic-bezier(1,0,0,1) 1s;
+  animation-fill-mode: both;
+}
+.registerPage-to-verdict-titleCard{
+  animation: registerPage-to-verdict-titleCard 1s cubic-bezier(1,0,0,1);
   animation-fill-mode: both;
 }

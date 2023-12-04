@@ -1,119 +1,26 @@
+<div id="modal" class="center-center" (click)="closeModal()">
+
+
+</div>
 <div id="menuPageContainer" class="center-center">
 
- 
+    <div id="button-background" class="center-center button-background-appear">
 
-    <div id="buttonBox" class="center-center">
-        <div id="button-Box" class="center-center button-Box-appear">
-            <div id="login-button" class="button center-center button-appear">LOGIN</div>
-            <div id="register-button" class="button center-center button-appear">REGISTER</div>
-            <div id="anonView-button" class="button center-center button-appear">View as Anonymous</div>
-            <div id="about-button" class="button center-center button-appear">About</div>
+        <div id="button-box" class="center-center button-box-appear" style="margin-top: 6rem;">
+
+            <div id="login-button"class="button center-center button-appear" (mouseover)="changeHover('login-button')" (click)="navigateTo('log-in')">LOGIN</div>
+            <div id="register-button" class="button center-center button-appear" (mouseover)="changeHover('register-button')" (click)="navigateTo('register')">REGISTER</div>
+            <div id="anonView-button" class="button center-center button-appear" (mouseover)="changeHover('anonView-button')"  (click)="openModal()">View as Anonymous</div>
+            <div id="about-button" class="button center-center button-appear" (mouseover)="changeHover('about-button')" (click)="navigateTo('about')">About</div>
+
+        </div>
+
+        <div id="decor" class="pos-abs">
+            <img id="decor-circle" class="pos-abs" src="./assets/MainMenu-Graphics/ButtonHolder-Circle.png">
+            <img id="decor-line" class="pos-abs" src="./assets/MainMenu-Graphics/ButtonHolder-Line.png">
         </div>
     </div>
 
-    <app-title-card [currentPage]="title" style="margin-bottom: 1rem;"></app-title-card>
+    <app-title-card [currentPage]="title"></app-title-card>
 </div>
-<!-- <div id="container" class="center-center">
-    <div id="horizonLine"></div>
-
-    <div id="left-content" class="center-center"></div>
-
-    <div id="right-content" class="center-center button-holder-appear-animation">
-        
-        <div id="button-container" class="center-center buttonContainer-appear-animation">
-
-            <div id="login-button" class="center-center login-button-appear-animation" (click)="navigateToLogin()">
-                <img src="./assets/MainMenu-Graphics/Login-Title.png" id="login-title" class="button-title">
-                <img src="./assets/MainMenu-Graphics/Login-Button.png" class="button-placard">
-            </div>
-
-            <div id="sign-up-button" class="center-center sign-up-button-appear-animation"(click)="navigateToSignUp()">
-                <img src="./assets/MainMenu-Graphics/Sign-Up-Title.png" id="sign-up-title" class="button-title">
-                <img src="./assets/MainMenu-Graphics/Sign-Up-Button.png" class="button-placard">
-            </div>
-
-            <div id="view-aa-button" class="center-center view-aa-button-appear-animation" (click)="openModal()">
-                <img src="./assets/MainMenu-Graphics/View-AA-Title.png" id="view-aa-title" class="button-title">
-                <img src="./assets/MainMenu-Graphics/View-AA-Button.png" class="button-placard">
-            </div>
-
-        </div>
-
-        <div id="buttonHolder-circle" class="buttonHolder-circle-appear-animation">
-            <img src="./assets/MainMenu-Graphics/ButtonHolder-Circle.png">
-        </div>
-
-        <div id="buttonHolder-line" class="buttonHolder-line-appear-animation">
-            <img src="./assets/MainMenu-Graphics/ButtonHolder-Line.png">
-        </div>
-        
-        <div id="buttonHolder-glassPieces" class="buttonHolder-glassPieces-appear-animation">
-            <img src="./assets/MainMenu-Graphics/ButtonHolder-GlassPieces.png">
-        </div>
-        
-        <div id="voidPiece-1" class="voidPiece-1-appear-animation">
-            <img src="./assets/MainMenu-Graphics/VoidPiece-1.png">
-        </div>
-        
-        <div id="voidPiece-2" class="voidPiece-2-appear-animation">
-            <img src="./assets/MainMenu-Graphics/VoidPiece-2.png">
-        </div>
-        
-        <div id="buttonHolder-background" class="background-appear-animation">
-            <img src="./assets/MainMenu-Graphics/ButtonHolder-Background.png">
-        </div>
-    </div>
-    
-    <div id="checkbox" class="center-center" >
-        <div id="blur-background" (click)="closeModal()"></div>
-        <div id="checkbox-content" class="center-center">
-            
-            <div id="background-container" class="center-center">
-                <div id="black-background"></div>
-
-                <img src="./assets/Checkbox-Graphics/Checkbox-VoidPiece-1.png" id="Checkbox-VoidPiece-1" class="pos-absolute cb-VoidPiece-1-appear">
-                <img src="./assets/Checkbox-Graphics/Checkbox-VoidPiece-2.png" id="Checkbox-VoidPiece-2" class="pos-absolute cb-VoidPiece-2-appear">
-
-                <img src="./assets/Checkbox-Graphics/Checkbox-Line-1.png" id="Checkbox-Line-1" class="pos-absolute cb-Line-1-appear">
-                <img src="./assets/Checkbox-Graphics/Checkbox-Line-2.png" id="Checkbox-Line-2" class="pos-absolute cb-Line-2-appear">
-                <img src="./assets/Checkbox-Graphics/Checkbox-Line-3.png" id="Checkbox-Line-3" class="pos-absolute cb-Line-3-appear">
-
-                <img src="./assets/Checkbox-Graphics/GlassPieces-1.png" id="GlassPieces-1" class="pos-absolute glassPieces-1-appear-animation">
-                <img src="./assets/Checkbox-Graphics/GlassPieces-2.png" id="GlassPieces-2" class="pos-absolute glassPieces-2-appear-animation">
-                <img src="./assets/Checkbox-Graphics/GlassPieces-3.png" id="GlassPieces-3" class="pos-absolute glassPieces-3-appear-animation">
-            </div> 
-
-            <div id="questionMark-container" class="center-center">
-                <img src="./assets/Checkbox-Graphics/QuestionMark-Holder-Decor.png" id="QuestionMark-Decor" class="pos-absolute">
-                <img src="./assets/Checkbox-Graphics/QuestionMark-Radiant.png" id="QuestionMark-Radiant" class="pos-absolute questionMark-radiant-appear">
-                <img src="./assets/Checkbox-Graphics/QuestionMark-Background.png" id="QuestionMark-Background" class="pos-absolute questionMark-background-container-appear">
-                <img src="./assets/Checkbox-Graphics/QuestionMark-Holder.png" id="QuestionMark-Holder" class="pos-absolute questionMark-appear-animation">
-                <img src="./assets/Checkbox-Graphics/QuestionMark-Outline.png" id="QuestionMark-Outline" class="pos-absolute questionMark-appear-animation">
-                <img src="./assets/Checkbox-Graphics/QuestionMark.png" id="QuestionMark" class="pos-absolute questionMark-appear-animation">
-            </div>
-
-            <div id="textbox-container" class="center-center textbox-appear-animation">
-                <img src="./assets/Checkbox-Graphics/TextBox.png" id="TextBox" class="pos-absolute">
-                <img src="./assets/Checkbox-Graphics/TextBox-Outline.png" id="TextBox-Outline" class="pos-absolute">
-                <img src="./assets/Checkbox-Graphics/TextBox-Title.png" id="TextBox-Title" class="pos-absolute">
-            </div>
-
-            <div id="button-container-checkbox" class="center-center button-container-checkbox-appear">
-                <img src="./assets/Checkbox-Graphics/Checkbox-Line.png" id="Checkbox-Line" class="pos-absolute checkbox-line-appear">              
-            
-                <div id="No-checkbox" class="pos-absolute center-center No-checkbox-appear" (click)="closeModal()">
-                    <img src="./assets/Checkbox-Graphics/No-Checkbox.png" id="" class="pos-absolute">
-                    <img src="./assets/Checkbox-Graphics/No-Checkbox-Title.png" id="Checkbox-Title" class="pos-absolute">
-                </div>
-            
-                <div id="Yes-checkbox" class="pos-absolute center-center Yes-checkbox-appear" (click)="navigateToVerdict()">
-                    <img src="./assets/Checkbox-Graphics/Yes-Checkbox.png" id="" class="pos-absolute">
-                    <img src="./assets/Checkbox-Graphics/Yes-Checkbox-Title.png" id="Checkbox-Title" class="pos-absolute">
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-</div>
- -->
+<!--  -->

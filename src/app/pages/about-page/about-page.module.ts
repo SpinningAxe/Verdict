@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { LogInRoutingModule } from './log-in-routing.module';
-import { LogInComponent } from './log-in.component';
+import { AboutPageRoutingModule } from './about-page-routing.module';
+import { AboutPageComponent } from './about-page.component';
 import { TitleCardComponent } from "../../components/title-card/title-card.component";
 
 
 @NgModule({
     declarations: [
-        LogInComponent
+        AboutPageComponent
     ],
     imports: [
         CommonModule,
-        LogInRoutingModule,
+        AboutPageRoutingModule,
         TitleCardComponent
     ]
 })
-export class LogInModule { }
+export class AboutPageModule { }

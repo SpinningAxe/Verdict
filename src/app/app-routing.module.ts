@@ -13,7 +13,7 @@ const routes: Routes = [
       import('./pages/menu-page/menu-page.module').then((m) => m.MenuPageModule),
   },
   {
-    path: 'sign-up',
+    path: 'register',
     loadChildren: () =>
       import('./pages/sign-up/sign-up.module').then((m) => m.SignUpModule),
   },
@@ -26,6 +26,11 @@ const routes: Routes = [
     path: 'verdict',
     loadChildren: () =>
       import('./pages/verdict/verdict.module').then((m) => m.VerdictModule),
+  },
+  {
+    path: 'about',
+    loadChildren: () =>
+      import('./pages/about-page/about-page.module').then((m) => m.AboutPageModule),
   },
   { path: 'user', loadChildren: () => import('./pages/user/user.module').then(m => m.UserModule) },
 ];

@@ -3,69 +3,126 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-menu-page',
   templateUrl: './menu-page.component.html',
-  styleUrls: ['./menu-page.component.scss']
+  styleUrls: ['./menu-page.component.scss'],
 })
-export class MenuPageComponent { 
-  constructor(private route: Router) { }
-  
-  title="menu-page";
+export class MenuPageComponent {
+  constructor(private route: Router) {}
 
-  async navigateTo(pageDes:string){
+  ngOnInit() {
+    let loginButton = document.getElementById('login-button');
 
-    setTimeout(() =>{
-      this.route.navigate([pageDes])
-    }, 200) 
+    setTimeout(() => {
+      loginButton!.classList.add('button-hover');
+    }, 100);
+    setTimeout(() => {
+      this.buttonBoxFlag = true;
+    }, 300);
   }
-  // navigateToLogin(){
-  //   setTimeout(() =>{
-  //     this.Router.navigate(['log-in'])
-  //   }, 200) 
-    
-  // }
+  buttonBoxFlag = false;
+  title = 'menu-page';
 
-  // navigateToSignUp(){
-  //   setTimeout(() =>{
-  //     this.Router.navigate(['sign-up'])
-  //   }, 200) 
-  // }
+  changeHover(buttonHover: string) {
+    if (this.buttonBoxFlag) {
+      let button = document.getElementById(buttonHover);
+      button!.classList.add('button-hover');
 
-  // openModal(){
-  //   let modal = document.getElementById('checkbox');
-  //   let right_conttent = document.getElementById('right-content');
-  //   let horizonLine = document.getElementById('horizonLine');
-    
-  //   right_conttent!.classList.remove("remove-blur-content")
-  //   right_conttent!.classList.add("blur-content")
-    
-  //   horizonLine!.classList.remove("remove-blur-content")
-  //   horizonLine!.classList.add("blur-content")
+      const allOptions = document.querySelectorAll('.button');
 
-  //   modal!.style.display = 'flex';
-  // }
+      allOptions.forEach((option) => {
+        if (option.id != buttonHover) {
+          option.classList.remove('button-hover');
+        }
+      });
+    }
+  }
 
-  // closeModal(){
-  //   let modal = document.getElementById('checkbox');
-  //   let right_conttent = document.getElementById('right-content');
-  //   let horizonLine = document.getElementById('horizonLine');
+  menuToLoginAnimate() {
+    let buttonBox = document.getElementById('button-box');
+    let buttonBackground = document.getElementById('button-background');
 
-  //   right_conttent!.classList.remove("blur-content")
-  //   right_conttent!.classList.add("remove-blur-content")
+    buttonBox!.classList.add('menuPage-to-loginPage-buttonBox');
+    buttonBackground!.classList.add('menuPage-to-loginPage-buttonBackground');
+  }
 
-  //   horizonLine!.classList.remove("blur-content")
-  //   horizonLine!.classList.add("remove-blur-content")
-    
-  //   modal!.style.display = 'none';
-  // }
+  menuToRegisterAnimate() {
+    let buttonBox = document.getElementById('button-box');
+    let buttonBackground = document.getElementById('button-background');
+    let titleCard = document.getElementById('titleCard');
 
-  // navigateToVerdict(){
-  //   setTimeout(() =>{
-  //     this.Router.navigate(['verdict'])
-  //   }, 200) 
+    buttonBox!.classList.add('menuPage-to-registerPage-buttonBox');
+    buttonBackground!.classList.add(
+      'menuPage-to-registerPage-buttonBackground'
+    );
+    titleCard!.classList.add('menuPage-to-registerPage-titleCard');
+  }
 
-  // }
+  menuToVerdictAnimate() {
+    let buttonBox = document.getElementById('button-box');
+    let buttonBackground = document.getElementById('button-background');
 
-  // hoverEffect(button:string){
-  //   let buttonHover = document.getElementById(`${button}`);
-  //   buttonHover!.classList.remove(`${button}-appear-animation`)
-  // }
+    buttonBox!.classList.add('menuPage-to-verdictPage-buttonBox');
+    buttonBackground!.classList.add('menuPage-to-verdictPage-buttonBackground');
+
+    let titleCard = document.getElementById('titleCard')
+    let horizonLine = document.getElementById('horizonLine')
+    let container = document.getElementById('container')
+
+    container!.classList.add('menuPage-to-verdict-container')
+    titleCard!.classList.add('menuPage-to-verdict-titleCard')
+    horizonLine!.classList.add('menuPage-to-verdict-horizonLine')
+  }
+
+  menuToAboutAnimate() {
+    let titleCard = document.getElementById('titleCard');
+    // let creator = document.getElementById("creator")
+    let buttonBox = document.getElementById('button-box');
+    let buttonBackground = document.getElementById('button-background');
+
+    // creator!.classList.add('menuPage-to-aboutPage-creator')
+    titleCard!.classList.add('menuPage-to-aboutPage-titleCard');
+    buttonBox!.classList.add('menuPage-to-aboutPage-buttonBox');
+    buttonBackground!.classList.add('menuPage-to-aboutPage-buttonBackground');
+  }
+
+  openModal() {
+    let modal = document.getElementById('modal');
+    let menuPage = document.getElementById('menuPageContainer');
+
+    menuPage!.classList.toggle('blur-content');
+    modal!.style.display = 'flex';
+  }
+
+  closeModal() {
+    let modal = document.getElementById('modal');
+    let menuPage = document.getElementById('menuPageContainer');
+
+    menuPage!.classList.toggle('blur-content');
+    modal!.style.display = 'none';
+  }
+
+  async navigateTo(pageDes: string) {
+    if (this.buttonBoxFlag) {
+      switch (pageDes) {
+        case 'log-in':
+          this.menuToLoginAnimate();
+          break;
+
+        case 'register':
+          this.menuToRegisterAnimate();
+          break;
+
+        case 'verdict':
+          this.menuToVerdictAnimate();
+          break;
+
+        case 'about':
+          this.menuToAboutAnimate();
+          break;
+      }
+
+      setTimeout(() => {
+        this.route.navigate([pageDes]);
+      }, 400);
+    }
+  }
 }

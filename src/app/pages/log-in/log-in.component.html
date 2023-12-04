@@ -1,54 +1,32 @@
-<!-- <div id="container" class="center-center">
-    <div id="leftContent" class="center-center">
+<div id="loginPageContainer" class="center-center">
 
-        <div id="background" class="center-center pos-relative">
-                <img id="Background-VoidPiece-1" src="./assets/LoginScreen-Graphics/Background-VoidPiece-1.png" class="center-center pos-abs">
-                <img id="Background-VoidPiece-2" src="./assets/LoginScreen-Graphics/Background-VoidPiece-2.png" class="center-center pos-abs">
-                <img id="Background-InkSpot" src="./assets/LoginScreen-Graphics/Background-InkSpot.png" class="center-center pos-abs">
-                <img id="Background-Lines" src="./assets/LoginScreen-Graphics/Background-Lines.png" class="center-center pos-abs">
-                <img id="Background-GlassPieces" src="./assets/LoginScreen-Graphics/Background-GlassPieces.png" class="center-center pos-abs">
+    <app-title-card [currentPage]="title"></app-title-card>
+<!-- 
+    <div id="login-banner" class="center-center">LOGIN</div> -->
+
+    <div id="login-background" class="center-center login-background-appear" style="margin-top: 6rem;">
+
+        <div id="emailAddress" class="section section-appear" style="margin-top: 4rem;">
+            <p class="sectionTitle">Email Address</p>
+            <input id="emailAddressInput" class="input">
         </div>
 
-        <div id="titleCard" class="center-center pos-abs">
-            <img id="TitleCard-Ring" src="./assets/LoginScreen-Graphics/TitleCard-Ring.png" class="pos-abs">
-            <img id="TitleCard-Decor-2" src="./assets/LoginScreen-Graphics/TitleCard-Decor-2.png" class="pos-abs">
-            <img id="TitleCard-Decor-1" src="./assets/LoginScreen-Graphics/TitleCard-Decor-1.png" class="pos-abs">
-            <img id="TitleCard-InkSpot" src="./assets/LoginScreen-Graphics/TitleCard-InkSpot.png" class="pos-abs">
-            <img id="TitleCard-Radiant" src="./assets/LoginScreen-Graphics/TitleCard-Radiant.png" class="pos-abs">
-            <img id="TitleCard-Placard" src=" ./assets/LoginScreen-Graphics/TitleCard-Placard.png" class="pos-abs">
-            <img id="TitleCard-Title" src="./assets/LoginScreen-Graphics/TitleCard-Title.png" class="pos-abs">
+        <div id="password" class="section section-appear">
+            <p class="sectionTitle">Password</p>
+            <input id="passwordInput" class="input" type="password">
+            <p id="forgotPasswordP">Forgot your password? Just remember it!</p>
         </div>
-        <div id="loginBox" class="center-center">
-
-            <div id="emailAddress" class="center-center">
-                <img id="Email-Decor" src="./assets/LoginScreen-Graphics/EmailSec-Decor.png" class="pos-relative">
-                <img id="Email-Placard" src="./assets/LoginScreen-Graphics/EmailSec-Placard.png" class="pos-abs">
-                <img id="Email-Title" src="./assets/LoginScreen-Graphics/EmailSec-Title.png" class="pos-relative">
-                <input id="emailInput" class="input">
-            </div>
-            <div id="password" class="center-center">
-                <img id="Password-Decor" src="./assets/LoginScreen-Graphics/PasswordSec-Decor.png" class="pos-relative">
-                <img id="Password-Placard" src="./assets/LoginScreen-Graphics/PasswordSec-Placard.png" class="pos-relative">
-                <img id="Password-Title" src="./assets/LoginScreen-Graphics/PasswordSec-Title.png" class="pos-relative">
-                <img id="Password-Forgor" src="./assets/LoginScreen-Graphics/PasswordSec-Forgor.png" class="pos-relative">
-                <input id="passwordInput" class="input" type="password">
+        
+        <div id="rememberMe" class="section center-center section-appear" style="margin-top: 4rem;">
             
-            </div>
+            <!-- <img id="checkbox-decor" src="./assets/LoginScreen-Graphics/RememberMe-Decor.png"> -->
+            <div id="rememberMeCheckbox" class="checkbox" (click)="tickCheckbox()"></div>
+            <img id="checkmark" class="checkmark" src="./assets/LoginScreen-Graphics/RememberMe-CheckMark.png">
+            Remember Me</div>
 
-            <div id="rememberMe" class="center-center">
-                <img id="RememberMe-Tickbox" src="./assets/LoginScreen-Graphics/RememberMe-Tickbox.png" class="pos-relative">
-                <img id="RememberMe-Decor" src="./assets/LoginScreen-Graphics/RememberMe-Decor.png" class="pos-relative">
-                <img id="RememberMe-Title" src="./assets/LoginScreen-Graphics/RememberMe-Title.png" class="pos-relative">
-                <img id="RememberMe-CheckMark" src="./assets/LoginScreen-Graphics/RememberMe-CheckMark.png" class="pos-relative">
-            </div>
-        </div>
+        <div id="loginButton" (click)="navigateTo('verdict')" class="button center-center">LOGIN</div>
 
-        <div id="loginButton" class="center-center">
-            <img id="LoginButton-Decor" src="./assets/LoginScreen-Graphics/LoginButton-Decor.png" class="pos-relative">
-            <img id="LoginButton-Placard" src="./assets/LoginScreen-Graphics/LoginButton-Placard.png" class="pos-relative" (click)="navigateTo('verdict')">
-            <img id="LoginButton-Title" src="./assets/LoginScreen-Graphics/LoginButton-Title.png" class="pos-relative" (click)="navigateTo('verdict')">    
-        </div>
     </div>
-    <div id="backButton" class="center-center pos-relative" (click)="navigateTo('menu-page')">Back</div>
 
-</div> -->
+    <div id="backButton" (click)="navigateTo('menu-page')">Back</div>
+</div>
